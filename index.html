@@ -27,30 +27,38 @@
 
 <body>
   <div class="flex-centered">
-    <div class="top-shade">
-      <h1>
-        Welcome
-      </h1>
-    </div>
-    <div>
-      <h2>
-        My Projects
-      </h2>
-    </div>
-    <div class="flex-row">
-      <div class="tile">
-        <h3>
-          <a class="product-title" href="/chordgen">
-            ChordGen
-          </a>
-        </h3>
+    <div class="top-shade boxed">
+      <img class="portrait" src="https://paulbiberstein.me/resources/portrait.jpg">
+      <div class="introduction">
+        <h1>
+          Welcome
+        </h1>
+        <p>
+          My name's Paul. I'm a student at Brown University interested in computer science and music. Check out some of my projects!
+        </p>
       </div>
-      <div class="tile">
-        <h3>
-          <a class="product-title" href="/tempotrainer">
-            TempoTrainer
-          </a>
-        </h3>
+    </div>
+    <div class="boxed">
+      <h2>
+        Projects
+      </h2>
+      <div class="projects">
+        <div class="tile boxed">
+          <img class="logo" src="https://paulbiberstein.me/resources/mlchordgen.png">
+          <h3 class="product-title">
+            <a href="/chordgen">
+              ML ChordGen
+            </a>
+          </h3>
+        </div>
+        <div class="tile boxed">
+          <img class="logo" src="https://paulbiberstein.me/resources/tempotrainer.png">
+          <h3>
+            <a class="product-title" href="/tempotrainer">
+              TempoTrainer
+            </a>
+          </h3>
+        </div>
       </div>
     </div>
   </div>
@@ -58,7 +66,12 @@
 
 
 <footer class="footer">
-  Copyright: Paul Biberstein 2019
+  <a class="icon-link" href="https://github.com/p-bibs">
+    <img class="icon" src="https://paulbiberstein.me/resources/githubicon.png">
+  </a>
+  <a class="icon-link" href="https://linkedin.com/in/paulbib/">
+    <img class="icon" src="https://paulbiberstein.me/resources/linkedinicon.png">
+  </a>
 </footer>
 
 </html>
