@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-  <script src="main.js"></script>
+  <script type="module" src="main.js"></script>
 
   <title>Paul Biberstein</title>
 
@@ -29,36 +29,28 @@
 </head>
 
 <body onload="main()">
-  <div class="personal-and-dots-area">
-    <div class="personal">
-      <div>Hi, I'm Paul</div>
-      <div>Computer Science and Music Student at Brown University</div>
-    </div>
-    <div class="dots">
-      
-    </div>
+  <div class="name">
+    <img class="portrait" src="https://paulbiberstein.me/resources/portrait.jpg">
+    <div>Paul Biberstein</div>
   </div>
-  <div class="project-categories">
-    <div class="project-category" onmouseover="moveDotsTo('music')">
-      Music
-    </div>
-    <div class="project-category" onmouseover="moveDotsTo('web')">
-      Web
-    </div>
-    <div class="project-category" onmouseover="moveDotsTo('hardware')">
-      Hardware
-    </div>
+  <hr/>
+  <div class="icons">
+  </div>
+  <div class="subtitle">
+    Web, hardware, and acoustic projects.
+  </div>
+  <hr />
+  <div class="education">
+    Student at Brown University
+  </div>
+  <hr />
+  <div class="external-links">
+    <a class="icon-link invert" href="https://github.com/p-bibs" target="_blank" rel="noopener noreferrer">
+      <img class="icon" src="https://paulbiberstein.me/resources/githubicon.png">
+    </a>
+    <a class="icon-link" href="https://linkedin.com/in/paulbib/" target="_blank" rel="noopener noreferrer">
+      <img class="icon" src="https://paulbiberstein.me/resources/linkedinicon.png">
+    </a>
   </div>
 </body>
-
-
-<!-- <footer class="footer">
-  <a class="icon-link" href="https://github.com/p-bibs">
-    <img class="icon" src="https://paulbiberstein.me/resources/githubicon.png">
-  </a>
-  <a class="icon-link" href="https://linkedin.com/in/paulbib/">
-    <img class="icon" src="https://paulbiberstein.me/resources/linkedinicon.png">
-  </a>
-</footer> -->
-
 </html>
