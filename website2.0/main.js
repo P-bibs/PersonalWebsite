@@ -27,8 +27,8 @@ function preprocessIconData() {
 
             let xCoords = icon_data.coordinates.map(x => x[0])
             let yCoords = icon_data.coordinates.map(x => x[1])
-            let xRange = [Math.min.apply(null, xCoords), Math.max.apply(null, xCoords)]
-            let yRange = [Math.min.apply(null, yCoords), Math.max.apply(null, yCoords)]
+            let xRange = [Math.min(...xCoords), Math.max(...xCoords)]
+            let yRange = [Math.min(...yCoords), Math.max(...yCoords)]
             let width = xRange[1] - xRange[0]
             let height = yRange[1] - yRange[0]
 
@@ -78,7 +78,6 @@ function animateIcons() {
 
                 let elem = document.createElement("div")
                 elem.className = `dot ${icon_name}`
-                //elem.style.transform = `translate(${startX}px, ${startY}px)`
                 canvas.appendChild(elem)
 
                 let fromx = startX
@@ -107,7 +106,8 @@ function animateSubtitle() {
         targets: subtitle,
         opacity: [0, 1],
         duration: subtitleDuration,
-        delay: subtitleInitialDelay
+        delay: subtitleInitialDelay,
+        easing: 'easeOutCubic'
     })
 }
 
