@@ -1,1 +1,0 @@
-rsync -aPv --exclude '.gitignore' --exclude 'node_modules' --exclude 'package-lock.json' --exclude 'sync.sh' ~/Development/PersonalWebsite/ paul@paulbiberstein.me:/var/www/html
