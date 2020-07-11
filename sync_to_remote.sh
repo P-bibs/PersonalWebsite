@@ -11,7 +11,7 @@ destination="paul@paulbiberstein.me:~/Development/PersonalWebsite"
 # copy specified directory
 rsync -razzvhP --exclude 'node_modules' "$1/" "$destination"
 # copy resources
-rsync -azzvhP ~/Development/PersonalWebsite/resources "$destination/resources"
+rsync -razzvhP ~/Development/PersonalWebsite/resources "$destination/"
 # copy sitemap
 rsync -azzvhP ~/Development/PersonalWebsite/sitemap "$destination/sitemap"
 # copy scripts
