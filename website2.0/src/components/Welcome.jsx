@@ -8,6 +8,7 @@ import {
 } from "../util/iconPointUtilities";
 import projects from "./content";
 import Project from "./Project";
+import portrait from "../assets/portrait.jpg";
 
 const Welcome = () => {
   const [canvasHeight, setCanvasHeight] = useState(null);
@@ -30,10 +31,7 @@ const Welcome = () => {
     <>
       <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
         <div className="flex flex-row justify-center items-center">
-          <img
-            className="w-16 h-16 rounded-full mr-2"
-            src="https://paulbiberstein.me/resources/portrait.jpg"
-          />
+          <img className="w-16 h-16 rounded-full mr-2" src={portrait} />
           <div>Paul Biberstein</div>
         </div>
         <hr />
