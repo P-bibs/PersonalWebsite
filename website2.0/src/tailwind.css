@@ -4,13 +4,22 @@ a {
   @apply underline cursor-pointer text-blue-500;
 }
 
+h1 {
+  @apply text-center
+}
+
 h2 {
-  @apply text-center text-3xl;
+  @apply my-2 text-center text-3xl;
 }
 
 h3 {
-  @apply text-center text-2xl;
+  @apply my-2 text-2xl;
 }
+
+hr {
+  @apply w-1/5 h-px my-4 bg-gray-700 border-0;
+}
+
 
 @tailwind components;
 @tailwind utilities;
