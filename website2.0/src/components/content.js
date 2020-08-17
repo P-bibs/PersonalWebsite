@@ -120,18 +120,18 @@ export default {
           type: "GITHUB",
           href: "https://github.com/P-bibs/ThwackTimingGateApp",
         },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/ThwackTimingGateServer",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/ThwackTimingGateStartLine",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/ThwackTimingGateFinishLine",
-        },
+        // {
+        //   type: "GITHUB",
+        //   href: "https://github.com/P-bibs/ThwackTimingGateServer",
+        // },
+        // {
+        //   type: "GITHUB",
+        //   href: "https://github.com/P-bibs/ThwackTimingGateStartLine",
+        // },
+        // {
+        //   type: "GITHUB",
+        //   href: "https://github.com/P-bibs/ThwackTimingGateFinishLine",
+        // },
       ],
       short: `An affordable wireless ski-timing system`,
       content: [

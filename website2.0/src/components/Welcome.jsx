@@ -18,23 +18,22 @@ import projects from "./content";
 const l = preprocessIconData(iconDatas);
 
 const Project = (data) => (
-  <div class="lg:w-5/6 m-4 p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
-    <div className="w-2/5 h-64 relative">
+  <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
+    <div className="w-full h-48 lg:w-4/12 lg:h-64 relative">
       <div className="w-full h-full relative">
         {data.screen ? (
           <div className="w-full h-full relative">
             <img
-              className="w-8/12 absolute shadow"
+              className="w-8/12 absolute top-0 left-0 shadow"
               src={`/screens/${data.screen}Screen1.png`}
             />
             <img
-              className="w-8/12 absolute shadow"
-              style={{ top: "100px", right: "0px" }}
+              className="w-8/12 absolute bottom-0 right-0 shadow"
               src={`/screens/${data.screen}Screen2.png`}
             />
           </div>
         ) : (
-          <div className="w-full h-full text-center bg-gray-400 rounded flex flex-col items-center justify-center">
+          <div className="w-full h-full text-center text-2xl bg-gray-400 rounded flex flex-col items-center justify-center">
             {data.title}
           </div>
         )}
@@ -43,15 +42,15 @@ const Project = (data) => (
         {data.title}
       </div> */}
     </div>
-    <div class="w-1/3 flex-grow flex flex-col">
-      <div class="flex flex-row flex-wrap items-center">
-        <h2>{data.title}</h2>
-        <div className="ml-3 space-x-2">
+    <div class="lg:w-px flex-grow flex flex-col">
+      <div class=" flex flex-row flex-wrap items-center">
+        <h2 className="mr-2">{data.title}</h2>
+        <div className="h-full space-x-2 flex flex-row flex-wrap justify-center">
           {data.interactions.map(({ type, href }) => (
             <span className="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer">
               <a className="no-underline" target="_blank" href={href}>
                 {type === "GITHUB"
-                  ? "Github repository"
+                  ? "Github"
                   : type === "DEMO"
                   ? "See it live"
                   : type === "DOCUMENTATION"
@@ -161,13 +160,15 @@ const Welcome = () => {
           </a>
         </div>
       </div>
-      <div class="w-full py-3 px-24 bg-gray-300 divide-y flex flex-col items-center">
+      <div class="w-full bg-gray-300 flex flex-col items-center">
         {Object.keys(projects).map((key) => (
           <>
-            <h2>{key} Projects</h2>
-            {projects[key].map((data) => (
-              <Project {...data} />
-            ))}
+            <h2 className="text-center">{key} Projects</h2>
+            <div className="w-full lg:w-5/6 px-4 space-y-4">
+              {projects[key].map((data) => (
+                <Project {...data} />
+              ))}
+            </div>
           </>
         ))}
       </div>
