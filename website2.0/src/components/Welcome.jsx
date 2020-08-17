@@ -1,10 +1,4 @@
-import React, {
-  useRef,
-  useEffect,
-  useCallback,
-  useState,
-  useMemo,
-} from "react";
+import React, { useCallback, useState, useMemo } from "react";
 import Anime from "react-anime";
 import ReactMarkdown from "react-markdown";
 import { iconDatas } from "../util/data.js";
@@ -16,9 +10,11 @@ import {
 import projects from "./content";
 
 const l = preprocessIconData(iconDatas);
+const a = animateIcons(l, 500, 500);
+console.log(a);
 
 const Project = (data) => (
-  <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
+  <div className="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
     <div className="w-full h-48 lg:w-4/12 lg:h-64 relative">
       <div className="w-full h-full relative">
         {data.screen ? (
@@ -38,12 +34,9 @@ const Project = (data) => (
           </div>
         )}
       </div>
-      {/* <div className="w-full h-full absolute top-0 left-0 rounded text-white bg-gray-800 opacity-0 hover:opacity-50 flex flex-col items-center justify-center">
-        {data.title}
-      </div> */}
     </div>
-    <div class="lg:w-px flex-grow flex flex-col">
-      <div class=" flex flex-row flex-wrap items-center">
+    <div className="lg:w-px flex-grow flex flex-col">
+      <div className=" flex flex-row flex-wrap items-center">
         <h2 className="mr-2">{data.title}</h2>
         <div className="h-full space-x-2 flex flex-row flex-wrap justify-center">
           {data.interactions.map(({ type, href }) => (
@@ -120,17 +113,6 @@ const Welcome = () => {
                 ))
               )}
         </div>
-        {/* <div className="icons">
-        {iconDatas.hardware.coordinates.map((coord, i) => {
-          return (
-            <div
-              className="dot"
-              key={i}
-              style={{ transform: `translateX(${coord[0]}px) translateY(${coord[1]}px)` }}
-            />
-          );
-        })}
-      </div> */}
         <Anime {...subtitleAnimeProps}>
           <div className="text-center">
             <a href="/projects#web">Web</a>,{" "}
@@ -160,7 +142,7 @@ const Welcome = () => {
           </a>
         </div>
       </div>
-      <div class="w-full bg-gray-300 flex flex-col items-center">
+      <div className="w-full bg-gray-300 flex flex-col items-center">
         {Object.keys(projects).map((key) => (
           <>
             <h2 className="text-center">{key} Projects</h2>

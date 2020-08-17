@@ -67,8 +67,8 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
     const r = Math.random() * startingRadius;
     const t = Math.random() * 2 * Math.PI;
     startingCoordinates.push([
-      r * Math.cos(t) + canvasWidth,
-      r * Math.sin(t) + canvasHeight,
+      r * Math.cos(t) + canvasWidth / 2,
+      r * Math.sin(t) + canvasHeight / 2,
     ]);
   }
 
@@ -91,9 +91,10 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
         ];
 
         const fromX = startX;
-        const toX = iconData.coordinates[i][0] + canvasWidth + canvasLoc[0];
+        const toX = iconData.coordinates[i][0] + canvasWidth / 2 + canvasLoc[0];
         const fromy = startY;
-        const toY = iconData.coordinates[i][1] + canvasHeight + canvasLoc[1];
+        const toY =
+          iconData.coordinates[i][1] + canvasHeight / 2 + canvasLoc[1];
 
         animeProps[iconName].push({
           translateX: [fromX, toX],
@@ -106,7 +107,7 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
       j++;
     }
   }
-
+  console.log(animeProps);
   return animeProps;
 }
 
@@ -119,4 +120,4 @@ function animateSubtitle() {
   };
 }
 
-export { preprocessIconData, animateIcons, animateSubtitle }
+export { preprocessIconData, animateIcons, animateSubtitle };
