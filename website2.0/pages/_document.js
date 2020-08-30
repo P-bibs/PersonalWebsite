@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Paul Biberstein's persona website. Computer science and math concentrator at Brown University class of 2023."
+            content="Paul Biberstein's personal website. Computer science and math concentrator at Brown University class of 2023."
           />
         </Head>
         <body>
