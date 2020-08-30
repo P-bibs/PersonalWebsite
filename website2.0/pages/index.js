@@ -1,14 +1,14 @@
+import Head from 'next/head';
 import React, { useCallback, useMemo, useState } from "react";
 import Anime from "react-anime";
 import { iconDatas } from "../util/data.js";
 import {
   animateIcons,
   animateSubtitle,
-  preprocessIconData,
+  preprocessIconData
 } from "../util/iconPointUtilities";
-import projects from "./content";
-import Project from "./Project";
-import portrait from "../assets/portrait.jpg";
+import projects from "../content/projects";
+import Project from "../components/Project";
 
 const Welcome = () => {
   const [canvasHeight, setCanvasHeight] = useState(null);
@@ -29,9 +29,13 @@ const Welcome = () => {
 
   return (
     <>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
         <div className="flex flex-row justify-center items-center">
-          <img className="w-16 h-16 rounded-full mr-2" src={portrait} />
+          <img className="w-16 h-16 rounded-full mr-2" src="portrait.jpg" />
           <div>Paul Biberstein</div>
         </div>
         <hr />
