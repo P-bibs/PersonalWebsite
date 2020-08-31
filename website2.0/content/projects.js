@@ -8,7 +8,7 @@ export default {
       interactions: [
         {
           type: "DEMO",
-          href: "/tempotrainer/",
+          href: "https://tempotrainer.paulbiberstein.me",
         },
         {
           type: "GITHUB",
@@ -30,7 +30,7 @@ export default {
       interactions: [
         {
           type: "DEMO",
-          href: "/OneNight",
+          href: "https://onenight.paulbiberstein.me/OneNight",
         },
         {
           type: "GITHUB",
@@ -60,7 +60,7 @@ export default {
       interactions: [
         {
           type: "DEMO",
-          href: "/Wikiku",
+          href: "https://wikiku.paulbiberstein.me/Wikiku",
         },
         {
           type: "GITHUB",
@@ -160,7 +160,7 @@ export default {
       interactions: [
         {
           type: "DEMO",
-          href: "/chordgen/",
+          href: "https://chordgen.paulbiberstein.me",
         },
         {
           type: "GITHUB",

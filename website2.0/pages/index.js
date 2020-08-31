@@ -30,7 +30,7 @@ const Welcome = () => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Paul Biberstein</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
