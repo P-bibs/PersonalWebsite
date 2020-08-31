@@ -1,6 +1,27 @@
 export default {
   Web: [
     {
+      title: "Mix Capsule",
+      category: "web",
+      screen: "MixCapsule",
+      interactions: [
+        {
+          type: "DEMO",
+          href: "https://mixcapsule.paulbiberstein.me",
+        },
+        {
+          type: "GITHUB",
+          href: "https://github.com/P-bibs/MixCapsule",
+        },
+      ],
+      short:
+        "Time capsule playlists delivered to you every month",
+      content: [
+        "Description coming soon",
+      ],
+      relevantTopics: ["JavaScript", "NextJS", "Python", "Django", "Tailwind", "UI/UX", "Music"],
+    },
+    {
       title: "Tempo Trainer",
       category: "web",
       image: "tempotrainer.png",
