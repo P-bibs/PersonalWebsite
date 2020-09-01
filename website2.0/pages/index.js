@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import Anime from "react-anime";
-import { IoIosArrowDown } from "react-icons/io";
 import Project from "../components/Project";
 import projects from "../content/projects";
 import { iconDatas } from "../util/data.js";
@@ -114,9 +113,9 @@ const Welcome = () => {
             </a>
           </div>
         </div>
-        <div class="w-full mb-8 text-center">
+        <div className="w-full mb-8 text-center">
           <div
-            class="scroll-arrow"
+            className="scroll-arrow"
             onClick={() => scrollToAnchor(`Web-projects`)}
           ></div>
         </div>
@@ -129,7 +128,7 @@ const Welcome = () => {
             </h2>
             <div className="w-full lg:w-5/6 px-4 space-y-4">
               {projects[key].map((data) => (
-                <Project {...data} />
+                <Project key={data.title} {...data} />
               ))}
             </div>
           </>

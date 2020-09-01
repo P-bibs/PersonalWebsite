@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-export default (data) => (
+const Project = (data) => (
   <div className="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
     <div className="w-full h-48 lg:w-4/12 lg:h-64 relative">
       <div className="w-full h-full relative">
@@ -28,7 +28,10 @@ export default (data) => (
         <h2 className="mr-2">{data.title}</h2>
         <div className="h-full space-x-2 flex flex-row flex-wrap justify-center">
           {data.interactions.map(({ type, href }) => (
-            <span className="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer">
+            <span
+              key={href}
+              className="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer"
+            >
               <a className="no-underline" target="_blank" href={href}>
                 {type === "GITHUB"
                   ? "Github"
@@ -49,7 +52,7 @@ export default (data) => (
       </div>
       <div>
         {data.content.map((p) => (
-          <ReactMarkdown source={p} />
+          <ReactMarkdown key={p} source={p} />
         ))}
         <div className="mt-2">
           <strong>Relevant Topics: </strong> {data.relevantTopics.join(", ")}
@@ -58,3 +61,5 @@ export default (data) => (
     </div>
   </div>
 );
+
+export default Project;
