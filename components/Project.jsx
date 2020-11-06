@@ -8,11 +8,11 @@ const Project = (data) => (
         {data.screen ? (
           <div className="w-full h-full relative">
             <img
-              className="w-8/12 absolute top-0 left-0 shadow"
+              className="project-screen top-0 left-0"
               src={`/screens/${data.screen}Screen1.png`}
             />
             <img
-              className="w-8/12 absolute bottom-0 right-0 shadow"
+              className="project-screen bottom-0 right-0"
               src={`/screens/${data.screen}Screen2.png`}
             />
           </div>

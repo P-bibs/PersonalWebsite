@@ -37,4 +37,13 @@ hr {
   -webkit-transform: rotate(45deg);
 }
 
+.project-screen {
+  max-width: 66.6%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+
+  @apply absolute shadow;
+}
+
 @tailwind utilities;
