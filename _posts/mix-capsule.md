@@ -102,7 +102,7 @@ Enter **Utility-first CSS**. Rather than keep up a facade of "separation of conc
 
 ![Example Tailwind styling](https://dev-to-uploads.s3.amazonaws.com/i/acb2o6yt5g2bshpqa5ot.png)
 
-<figcaption>An example of utility-first CSS. We compose many single-function classes. w-full=full width, h-24=height 24, mx-12=margin across 12, mt-4=margin top 4, p-12=padding 12, etc.</figcaption>
+<figcaption>An example of utility-first CSS. We compose many single-function classes. `w-full`=full width, `h-24`=height 24, `mx-12`=margin across 12, `mt-4`=margin top 4, `p-12`=padding 12, etc.</figcaption>
 
 Development is significantly sped up because you don't have to reference external style sheets and come up with class names, and designs are standardized since you're limited to a designated set of spacings and palettes.
 
@@ -128,10 +128,8 @@ When used properly, live chat lets you have conversations with users of your sit
 
 The Mix Capsule repository was initially private since I didn't have a good way to store my API keys, but ever since I moved to `.env` files it is fully open-source!
 
-{% github p-bibs/MixCapsule no-readme %}
+[Github repository](https://github.com/P-bibs/MixCapsule)
 
 # Testing the product
 
-My most recent Mix Capsule is here:
-{% spotify spotify:playlist:42v7SflSN03s8MqfmyPMDA %}
-Once you generate your [first Mix Capsule playlist](https://mixcapsule.paulbiberstein.me), feel free to share them in the comments!
+My most recent Mix Capsule is [here](https://open.spotify.com/playlist/1CzyDE8KHKqUIYyCNoQJkx?si=Irlh3pNDS5Sm6gRm5cQ1cg). Once you generate your [first Mix Capsule playlist](https://mixcapsule.paulbiberstein.me), feel free to share them in the comments!
