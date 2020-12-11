@@ -99,6 +99,7 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
         animeProps[iconName].push({
           translateX: [fromX, toX],
           translateY: [fromy, toY],
+          width: [2, 2],
           easing: "easeOutQuint",
           delay: iconAnimInitialDelay + j * iconAnimSubsequentDelay,
           duration: iconAnimDuration,
