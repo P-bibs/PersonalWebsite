@@ -10,6 +10,7 @@ class MyDocument extends Document {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-143047727-1"
           ></script>
+          <script data-ad-client="ca-pub-1240225859253970" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
