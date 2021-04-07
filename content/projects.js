@@ -14,12 +14,17 @@ export default {
           href: "https://github.com/P-bibs/MixCapsule",
         },
       ],
-      short:
-        "Time capsule playlists delivered to you every month",
-      content: [
-        "Description coming soon",
+      short: "Time capsule playlists delivered to you every month",
+      content: ["Description coming soon"],
+      relevantTopics: [
+        "JavaScript",
+        "NextJS",
+        "Python",
+        "Django",
+        "Tailwind",
+        "UI/UX",
+        "Music",
       ],
-      relevantTopics: ["JavaScript", "NextJS", "Python", "Django", "Tailwind", "UI/UX", "Music"],
     },
     {
       title: "Tempo Trainer",
@@ -173,6 +178,29 @@ export default {
   ],
 
   Acoustic: [
+    {
+      title: `Coexistence`,
+      category: "acoustic",
+      screen: "Coexistence",
+      interactions: [
+        {
+          type: "DEMO",
+          href: "https://www.youtube.com/watch?v=dzQmvAuiaNY&t",
+        },
+      ],
+      short: `A computer music composition for guitar, glove, and algorithmic engine`,
+      content: [
+        `Coexistece is a computer music composition consisting of a guitar, capacitive glove, and algorithmic synthesizer engine. Rather than use the guitar to directly create sound, the performer grounds the tips of their fingers against the strings to send instructions to an algorithmic engine running on a computer and direct its output. For example, the performer may pluck with one finger to set the tempo, or strum with a different finger to set a base chord.`,
+        `The algorithmic engine is implemented in the programming language/performance environment Max/MSP and the glove is wired up to a MakeyMakey microcontroller to detect string-presses.`,
+      ],
+      relevantTopics: [
+        "Max/MSP",
+        "Computer Music",
+        "Multimedia",
+        "Microcontrollers",
+        "Electronics",
+      ],
+    },
     {
       title: `ML Chord Gen`,
       category: "acoustic",
