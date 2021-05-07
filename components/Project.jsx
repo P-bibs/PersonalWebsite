@@ -32,7 +32,12 @@ const Project = (data) => (
               key={href}
               className="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer"
             >
-              <a className="no-underline" target="_blank" href={href}>
+              <a
+                className="no-underline"
+                rel="noreferrer"
+                target="_blank"
+                href={href}
+              >
                 {type === "GITHUB"
                   ? "Github"
                   : type === "DEMO"
