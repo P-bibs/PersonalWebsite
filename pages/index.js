@@ -59,7 +59,7 @@ const Welcome = () => {
           <div className="flex flex-row justify-center items-center">
             <img
               className="w-16 h-16 rounded-full mr-2"
-              src={require("../assets/portrait.png")}
+              src={require("../assets/portrait.jpg")}
             />
             <div>Paul Biberstein</div>
           </div>
