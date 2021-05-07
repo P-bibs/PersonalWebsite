@@ -9,11 +9,11 @@ const Project = (data) => (
           <div className="w-full h-full relative">
             <img
               className="project-screen top-0 left-0"
-              src={`/screens/${data.screen}Screen1.png`}
+              src={require(`../assets/screens/${data.screen}Screen1.png`)}
             />
             <img
               className="project-screen bottom-0 right-0"
-              src={`/screens/${data.screen}Screen2.png`}
+              src={require(`../assets/screens/${data.screen}Screen2.png`)}
             />
           </div>
         ) : (
