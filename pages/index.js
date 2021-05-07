@@ -57,7 +57,10 @@ const Welcome = () => {
       <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
         <div className="w-full flex-grow flex flex-col items-center justify-center">
           <div className="flex flex-row justify-center items-center">
-            <img className="w-16 h-16 rounded-full mr-2" src="portrait.jpg" />
+            <img
+              className="w-16 h-16 rounded-full mr-2"
+              src={require("../assets/portrait.jpg")}
+            />
             <div>Paul Biberstein</div>
           </div>
           <hr />
@@ -101,7 +104,10 @@ const Welcome = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-6 h-6 m-3" src="/githubicon.png" />
+              <img
+                className="w-6 h-6 m-3"
+                src={require("../assets/githubicon.png")}
+              />
             </a>
             <a
               className="text-black"
@@ -109,7 +115,10 @@ const Welcome = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-6 h-6 m-3" src="/linkedinicon.png" />
+              <img
+                className="w-6 h-6 m-3"
+                src={require("../assets/linkedinicon.png")}
+              />
             </a>
           </div>
         </div>

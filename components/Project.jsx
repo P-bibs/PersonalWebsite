@@ -9,11 +9,11 @@ const Project = (data) => (
           <div className="w-full h-full relative">
             <img
               className="project-screen top-0 left-0"
-              src={`/screens/${data.screen}Screen1.png`}
+              src={require(`../assets/screens/${data.screen}Screen1.png?webp`)}
             />
             <img
               className="project-screen bottom-0 right-0"
-              src={`/screens/${data.screen}Screen2.png`}
+              src={require(`../assets/screens/${data.screen}Screen2.png?webp`)}
             />
           </div>
         ) : (
@@ -32,7 +32,12 @@ const Project = (data) => (
               key={href}
               className="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer"
             >
-              <a className="no-underline" target="_blank" href={href}>
+              <a
+                className="no-underline"
+                rel="noreferrer"
+                target="_blank"
+                href={href}
+              >
                 {type === "GITHUB"
                   ? "Github"
                   : type === "DEMO"
