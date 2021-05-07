@@ -9,10 +9,12 @@ import {
   animateSubtitle,
   preprocessIconData,
 } from "../util/iconPointUtilities";
+import { init, SCALE } from "../util/animate";
 
 const Welcome = () => {
   const [canvasHeight, setCanvasHeight] = useState(null);
   const [canvasWidth, setCanvasWidth] = useState(null);
+  // Set the width/height of the canvas once its container has loaded
   const canvasRef = useCallback((node) => {
     if (node !== null) {
       setCanvasHeight(node.getBoundingClientRect().height);
@@ -20,11 +22,16 @@ const Welcome = () => {
     }
   }, []);
 
-  const adjustedIconData = useMemo(() => preprocessIconData(iconDatas), []);
-  const iconAnimeProps = useMemo(
-    () => animateIcons(adjustedIconData, canvasWidth, canvasHeight),
-    [adjustedIconData, canvasWidth, canvasHeight]
-  );
+  // Once the canvas has been created and sized, we can start the animation cycle
+  useEffect(() => {
+    if (canvasWidth && canvasHeight) {
+      const adjustedIconData = preprocessIconData(iconDatas);
+      const data = animateIcons(adjustedIconData, canvasWidth, canvasHeight);
+      console.log("Use effect hook fired");
+      init(data);
+    }
+  }, [canvasWidth, canvasHeight]);
+
   const subtitleAnimeProps = useMemo(() => animateSubtitle(), []);
 
   const [mounted, setMounted] = useState(false);
@@ -65,18 +72,16 @@ const Welcome = () => {
           </div>
           <hr />
           <div id="icons" className="w-1/3 h-64 m-3" ref={canvasRef}>
-            {!(adjustedIconData && iconAnimeProps && subtitleAnimeProps)
-              ? ""
-              : Object.keys(iconAnimeProps).map((iconName, i) =>
-                  iconAnimeProps[iconName].map((props, j) => (
-                    <Anime {...props} key={`${iconName} ${j}`}>
-                      <div
-                        style={{ height: "2px", width: "2px" }}
-                        className={`z-10 absolute bg-black rounded-full ${iconName}`}
-                      />
-                    </Anime>
-                  ))
-                )}
+            {canvasHeight && canvasWidth ? (
+              <canvas
+                id="canvas"
+                height={canvasHeight * SCALE}
+                width={canvasWidth * SCALE}
+                className="w-full h-full"
+              />
+            ) : (
+              ""
+            )}
           </div>
           <Anime {...subtitleAnimeProps}>
             <div className="text-center">
