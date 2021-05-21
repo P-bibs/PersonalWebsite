@@ -71,7 +71,7 @@ const Welcome = () => {
             <div>Paul Biberstein</div>
           </div>
           <hr />
-          <div id="icons" className="w-1/3 h-64 m-3" ref={canvasRef}>
+          <div id="icons" className="w-5/6 lg:w-1/3 h-64 m-3" ref={canvasRef}>
             {canvasHeight && canvasWidth ? (
               <canvas
                 id="canvas"

@@ -3,6 +3,7 @@ const INITIAL_DELAY = 300;
 const SUBSEQUENT_DELAY = 1000;
 
 export const SCALE = 8;
+const Y_OFFSET = 25;
 
 const easeOutQuint = function (t, b, c, d) {
   t /= d;
@@ -62,12 +63,13 @@ function drawCircles(data, iconName, linearProgress) {
       props.translateX[1] - props.translateX[0],
       1
     );
-    const calculatedY = easeOutQuint(
-      linearProgress,
-      props.translateY[0],
-      props.translateY[1] - props.translateY[0],
-      1
-    );
+    const calculatedY =
+      easeOutQuint(
+        linearProgress,
+        props.translateY[0],
+        props.translateY[1] - props.translateY[0],
+        1
+      ) + Y_OFFSET;
     const circle = new Path2D();
 
     circle.arc(
