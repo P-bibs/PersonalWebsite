@@ -21,6 +21,7 @@ export default function Index({ allPosts }) {
       </div>
     </div>
   );
+  // eslint-disable-next-line
   return (
     <>
       <Layout>

@@ -23,6 +23,7 @@ function draw(data, start) {
 
   const elapsedTime = new Date().getTime() - start;
   if (elapsedTime < INITIAL_DELAY) {
+    // Comment so eslint doesn't complain
   } else if (elapsedTime < INITIAL_DELAY + SUBSEQUENT_DELAY) {
     const linearProgress = (elapsedTime - INITIAL_DELAY) / SINGLE_DURATION;
     drawCircles(data, "web", linearProgress);
@@ -55,7 +56,7 @@ function drawCircles(data, iconName, linearProgress) {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // draw dots
-  data[iconName].forEach((props, j) => {
+  data[iconName].forEach((props) => {
     const calculatedX = easeOutQuint(
       linearProgress,
       props.translateX[0],

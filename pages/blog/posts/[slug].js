@@ -11,6 +11,7 @@ import Head from "next/head";
 import { CMS_NAME } from "../../../lib/constants";
 import markdownToHtml from "../../../lib/markdownToHtml";
 
+// eslint-disable-next-line
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -42,6 +43,7 @@ export default function Post({ post, morePosts, preview }) {
       )}
     </div>
   );
+  // eslint-disable-next-line
   return (
     <Layout preview={preview}>
       <Container>
