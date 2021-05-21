@@ -112,13 +112,4 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
   return animeProps;
 }
 
-function animateSubtitle() {
-  return {
-    opacity: [0, 1],
-    duration: subtitleDuration,
-    delay: subtitleInitialDelay,
-    easing: "easeOutCubic",
-  };
-}
-
-export { preprocessIconData, animateIcons, animateSubtitle };
+export { preprocessIconData, animateIcons };
