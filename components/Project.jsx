@@ -8,10 +8,12 @@ const Project = (data) => (
         {data.screen ? (
           <div className="w-full h-full relative">
             <img
+              alt={`${data.title} image 1`}
               className="project-screen top-0 left-0"
               src={require(`../assets/screens/${data.screen}Screen1.png?webp`)}
             />
             <img
+              alt={`${data.title} image 2`}
               className="project-screen bottom-0 right-0"
               src={require(`../assets/screens/${data.screen}Screen2.png?webp`)}
             />
