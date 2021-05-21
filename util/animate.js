@@ -1,6 +1,6 @@
-const SINGLE_DURATION = 1000;
+const SINGLE_DURATION = 900;
 const INITIAL_DELAY = 300;
-const SUBSEQUENT_DELAY = 1000;
+const SUBSEQUENT_DELAY = 900;
 
 export const SCALE = 8;
 const Y_OFFSET = 25;
