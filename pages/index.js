@@ -9,7 +9,7 @@ import {
   animateSubtitle,
   preprocessIconData,
 } from "../util/iconPointUtilities";
-import { init, SCALE } from "../util/animate";
+import { initializeAnimation, SCALE } from "../util/animate";
 
 const Welcome = () => {
   const [canvasHeight, setCanvasHeight] = useState(null);
@@ -27,8 +27,7 @@ const Welcome = () => {
     if (canvasWidth && canvasHeight) {
       const adjustedIconData = preprocessIconData(iconDatas);
       const data = animateIcons(adjustedIconData, canvasWidth, canvasHeight);
-      console.log("Use effect hook fired");
-      init(data);
+      initializeAnimation(data);
     }
   }, [canvasWidth, canvasHeight]);
 

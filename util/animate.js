@@ -83,6 +83,6 @@ function drawCircles(data, iconName, linearProgress) {
   });
 }
 
-export function init(data) {
+export function initializeAnimation(data) {
   window.requestAnimationFrame(() => draw(data, new Date().getTime()));
 }
