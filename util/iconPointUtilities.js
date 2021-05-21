@@ -108,7 +108,6 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
       j++;
     }
   }
-  console.log(animeProps);
   return animeProps;
 }
 

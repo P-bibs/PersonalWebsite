@@ -44,7 +44,6 @@ function draw(data, start) {
     drawCircles(data, "web", 1);
     drawCircles(data, "hardware", 1);
     drawCircles(data, "music", 1);
-    console.log("Animation finished");
     return;
   }
 
