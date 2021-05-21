@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint ./ --ext js,jsx,ts,tsx",
+    "format:check": "prettier --check 'pages/**/*.js' 'pages/**/*.jsx' 'util/**/*.js' 'util/**/*.jsx' 'lib/**/*.js' 'lib/**/*.jsx' 'content/**/*.js' 'content/**/*.jsx' 'components/**/*.js' 'components/**/*.jsx'"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
