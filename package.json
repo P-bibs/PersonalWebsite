@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint ./ --ext js,jsx,ts,tsx",
-    "format": "prettier --write 'pages/**/*.js' 'pages/**/*.jsx' 'util/**/*.js' 'util/**/*.jsx' 'lib/**/*.js' 'lib/**/*.jsx' 'content/**/*.js' 'content/**/*.jsx' 'components/**/*.js' 'components/**/*.jsx'",
-    "format:check": "prettier --check 'pages/**/*.js' 'pages/**/*.jsx' 'util/**/*.js' 'util/**/*.jsx' 'lib/**/*.js' 'lib/**/*.jsx' 'content/**/*.js' 'content/**/*.jsx' 'components/**/*.js' 'components/**/*.jsx'"
+    "format": "prettier --write '{pages,util,lib,content,components}/**/*.{js,jsx}'",
+    "format:check": "prettier --check '{pages,util,lib,content,components}/**/*.{js,jsx}'"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
