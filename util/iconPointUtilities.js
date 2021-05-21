@@ -5,7 +5,7 @@ const iconAngularDifference = (2 * Math.PI) / 3;
 const iconAnimInitialDelay = 300;
 const iconAnimSubsequentDelay = 500;
 const iconAnimDuration = 1000;
-const subtitleInitialDelay = 2300;
+const subtitleInitialDelay = 3000;
 const subtitleDuration = 2000;
 
 function preprocessIconData(rawIconDatas) {
@@ -108,17 +108,7 @@ function animateIcons(iconDatas, canvasWidth, canvasHeight) {
       j++;
     }
   }
-  console.log(animeProps);
   return animeProps;
 }
 
-function animateSubtitle() {
-  return {
-    opacity: [0, 1],
-    duration: subtitleDuration,
-    delay: subtitleInitialDelay,
-    easing: "easeOutCubic",
-  };
-}
-
-export { preprocessIconData, animateIcons, animateSubtitle };
+export { preprocessIconData, animateIcons };
