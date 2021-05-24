@@ -128,18 +128,21 @@ const Welcome = () => {
         </div>
       </div>
       <div className="w-full pb-8 bg-gray-300 flex flex-col items-center">
-        {Object.keys(projects).map((key) => (
-          <>
-            <h2 id={`${key}-projects`} className="text-center">
-              {key} Projects
-            </h2>
-            <div className="w-full lg:w-5/6 px-4 space-y-4">
-              {projects[key].map((data) => (
-                <Project key={data.title} {...data} />
-              ))}
-            </div>
-          </>
-        ))}
+        {(() => {
+          let index = 0;
+          return Object.keys(projects).map((key) => (
+            <>
+              <h2 id={`${key}-projects`} className="text-center">
+                {key} Projects
+              </h2>
+              <div className="w-full lg:w-5/6 px-4 space-y-4">
+                {projects[key].map((data) => (
+                  <Project key={data.title} {...data} index={index++} />
+                ))}
+              </div>
+            </>
+          ));
+        })()}
       </div>
     </>
   );

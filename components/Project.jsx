@@ -3,11 +3,9 @@ import ReactMarkdown from "react-markdown";
 
 const Project = (data) => (
   <div className="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
-    <div className="w-full h-48 lg:w-4/12 lg:h-64 relative">
-      <div className="w-full h-full relative">
-        {data.screen ? (
-          <div className="w-full h-full relative">
-            <img
+    <div className="w-full h-48 lg:w-4/12 lg:h-64 relative flex items-center justify-center">
+      <div className="cube-image-container">
+        {/* <img
               alt={`${data.title} image 1`}
               className="project-screen top-0 left-0"
               src={require(`../assets/screens/${data.screen}Screen1.png?webp`)}
@@ -16,13 +14,42 @@ const Project = (data) => (
               alt={`${data.title} image 2`}
               className="project-screen bottom-0 right-0"
               src={require(`../assets/screens/${data.screen}Screen2.png?webp`)}
-            />
+            /> */}
+        <div
+          className="cube-image"
+          style={{ animationDelay: `${data.index * 300}ms` }}
+        >
+          <div className="cube-image-face cube-front">
+            {data.screen ? (
+              <img
+                alt={`${data.title} image 1`}
+                className="w-full h-full object-fill"
+                src={require(`../assets/screens/${data.screen}Screen1.png?webp`)}
+              />
+            ) : (
+              <div className="w-full h-full text-center text-2xl bg-gray-400 flex flex-col items-center justify-center">
+                {data.title}
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="w-full h-full text-center text-2xl bg-gray-400 rounded flex flex-col items-center justify-center">
-            {data.title}
+          <div className="cube-image-face cube-back">
+            {data.screen ? (
+              <img
+                alt={`${data.title} image 2`}
+                className="w-full h-full object-fill"
+                src={require(`../assets/screens/${data.screen}Screen2.png?webp`)}
+              />
+            ) : (
+              <div className="w-full h-full text-center text-2xl bg-gray-400 flex flex-col items-center justify-center">
+                {data.title}
+              </div>
+            )}
           </div>
-        )}
+          <div className="cube-image-side cube-right"></div>
+          <div className="cube-image-side cube-left"></div>
+          <div className="cube-image-side cube-top"></div>
+          <div className="cube-image-side cube-bottom"></div>
+        </div>
       </div>
     </div>
     <div className="lg:w-px flex-grow flex flex-col">

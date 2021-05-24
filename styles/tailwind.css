@@ -61,4 +61,87 @@ hr {
   }
 }
 
+
+.cube-image-container {
+  width: 384px;
+  height: 216px;
+  perspective: 400px;
+}
+
+.cube-image {
+  width: 384px;
+  height: 216px;
+  position: relative;
+  transform-style: preserve-3d;
+
+  animation-name: cube-flip;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes cube-flip {
+
+  0%,
+  35% {
+    transform: translateZ(-100px);
+  }
+
+  50%,
+  85% {
+    transform: translateZ(-100px) rotateY(-180deg);
+  }
+
+  100% {
+    transform: translateZ(-100px) rotateY(-360deg);
+  }
+}
+
+.cube-image-face {
+  position: absolute;
+  width: 384px;
+  height: 216px;
+  box-shadow: 0px 0px 15px black;
+}
+
+.cube-image-side {
+  position: absolute;
+  width: 384px;
+  height: 20px;
+  background: grey;
+}
+
+.cube-front {
+  transform: rotateY(0deg) translateZ(20px);
+}
+
+.cube-back {
+  transform: rotateY(180deg) translateZ(20px);
+}
+
+.cube-right {
+  transform: rotateY(90deg) translateZ(364px);
+  width: 40px;
+  height: 216px;
+}
+
+.cube-left {
+  transform: rotateY(-90deg) translateZ(20px);
+  width: 40px;
+  height: 216px;
+}
+
+.cube-top {
+  transform: rotateX(90deg) translateZ(20px);
+  width: 384px;
+  height: 40px;
+}
+
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(196px);
+  width: 384px;
+  height: 40px;
+}
+
 @tailwind utilities;
