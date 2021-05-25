@@ -8,6 +8,7 @@ author:
   picture: "/portrait.jpg"
 ogImage:
   url: "/blog/mix-capsule/OptimizedMixCapsuleGif.gif"
+released: true
 ---
 
 [See the website](https://mixcapsule.paulbiberstein.me/)

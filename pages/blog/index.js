@@ -20,9 +20,9 @@ export default function Index({ allPosts }) {
       </Head>
       <Header />
       <div className="w-1/3 mx-auto space-y-4">
-        {allPosts.map((post) => (
-          <PostPreview key={post.title} {...post} />
-        ))}
+        {allPosts.map(
+          (post) => !post.released && <PostPreview key={post.title} {...post} />
+        )}
       </div>
       <Footer />
     </>
