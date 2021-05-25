@@ -130,7 +130,7 @@ const Welcome = () => {
       <div className="w-full pb-8 bg-gray-300 flex flex-col items-center">
         {Object.keys(projects).map((key) => (
           <>
-            <h2 id={`${key}-projects`} className="text-center">
+            <h2 id={`${key}-projects`} className="text-center my-2 text-3xl">
               {key} Projects
             </h2>
             <div className="w-full lg:w-5/6 px-4 space-y-4">
