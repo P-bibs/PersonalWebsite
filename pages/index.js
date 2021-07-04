@@ -5,8 +5,14 @@ import projects from "../content/projects";
 import { iconDatas } from "../util/data.js";
 import { animateIcons, preprocessIconData } from "../util/iconPointUtilities";
 import { initializeAnimation, SCALE } from "../util/animate";
+import smoothscroll from "smoothscroll-polyfill";
 
 const Welcome = () => {
+  useEffect(() => {
+    // Trigger smooth scroll polyfill on initial load
+    smoothscroll.polyfill();
+  });
+
   const [canvasHeight, setCanvasHeight] = useState(null);
   const [canvasWidth, setCanvasWidth] = useState(null);
   // Set the width/height of the canvas once its container has loaded
@@ -38,11 +44,9 @@ const Welcome = () => {
       ];
 
       if (anchors.includes(anchorString)) {
-        window.scrollTo({
-          top: document.getElementById(anchorString).getBoundingClientRect()
-            .top,
-          behavior: "smooth",
-        });
+        document
+          .getElementById(anchorString)
+          .scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -77,17 +81,10 @@ const Welcome = () => {
             )}
           </div>
           <div className="welcome-subtitle text-center">
-            <a href="#" onClick={() => scrollToAnchor("Web-projects")}>
-              Web
-            </a>
-            ,{" "}
-            <a href="#" onClick={() => scrollToAnchor("Hardware-projects")}>
-              hardware
-            </a>
-            , and{" "}
-            <a href="#" onClick={() => scrollToAnchor("Acoustic-projects")}>
-              acoustic
-            </a>{" "}
+            <a onClick={() => scrollToAnchor("Web-projects")}>Web</a>,{" "}
+            <a onClick={() => scrollToAnchor("Hardware-projects")}>hardware</a>,
+            and{" "}
+            <a onClick={() => scrollToAnchor("Acoustic-projects")}>acoustic</a>{" "}
             projects.
           </div>
           <hr />

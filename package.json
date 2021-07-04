@@ -34,6 +34,7 @@
     "react-scripts": "3.4.1",
     "remark": "11.0.2",
     "remark-html": "10.0.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
