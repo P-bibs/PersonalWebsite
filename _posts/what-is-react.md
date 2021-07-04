@@ -1,13 +1,14 @@
 ---
-title: "What is React? An explanation for Javascript devs"
-excerpt: "A brief explanation for those who know Javascript but can't understand where React fits into the web development picture and why it'll help elevate their next project."
-coverImage: ""
-date: "2021-05-11T05:35:07.322Z"
+title: "What is React?"
+excerpt: ""
+coverImage: "/blog/reading-urls/url-diagram.png"
+date: "2021-05-24T05:35:07.322Z"
 author:
   name: Paul Biberstein
   picture: "/portrait.jpg"
 ogImage:
-  url: ""
+  url: "/blog/reading-urls/url-diagram.png"
+released: false
 ---
 
 As a would-be web developer, you're often told to start your journey by learning Javascript. After making some basic websites, you might want to take on a more ambitious project. After scouring forums, blog posts, and your friend's Github, you determine that you _have_ to use React. There's only one problem:
