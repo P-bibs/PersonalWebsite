@@ -47,10 +47,6 @@ hr {
   @apply absolute shadow;
 }
 
-/* .welcome-subtitle {
-  animation: fadein 2s linear 3s backwards;
-} */
-
 @keyframes fadein {
   from {
     opacity: 0;
