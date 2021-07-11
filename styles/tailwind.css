@@ -1,7 +1,7 @@
 @tailwind base;
 
 a {
-  @apply underline cursor-pointer text-blue-500;
+  @apply  cursor-pointer text-blue-500;
 }
 
 h2 {
@@ -13,7 +13,7 @@ h3 {
 }
 
 hr {
-  @apply w-1/5 h-px my-4 bg-gray-700 border-0;
+  @apply h-px my-4 bg-gray-700 border-0;
 }
 
 @tailwind components;
@@ -47,9 +47,9 @@ hr {
   @apply absolute shadow;
 }
 
-.welcome-subtitle {
+/* .welcome-subtitle {
   animation: fadein 2s linear 3s backwards;
-}
+} */
 
 @keyframes fadein {
   from {
@@ -60,5 +60,22 @@ hr {
     opacity: 100%;
   }
 }
+
+.welcome-link {
+  transition: text-decoration-color 500ms;
+  transition-timing-function: linear;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+}
+
+.welcome-link[data-animation="running"] {
+  text-decoration-color: rgba(59,130,246,1);
+}
+
+.welcome-link:hover {
+  transition: none;
+  text-decoration: underline 0.15em rgba(59,130,246,1);
+}
+
+
 
 @tailwind utilities;

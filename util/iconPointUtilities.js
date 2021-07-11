@@ -1,17 +1,8 @@
-// Icon arrangement parameters
-const iconAngularDifference = (2 * Math.PI) / 3;
-
-// animation parameters
-const iconAnimInitialDelay = 300;
-const iconAnimSubsequentDelay = 500;
-const iconAnimDuration = 1000;
-
-function preprocessIconData(rawIconDatas) {
+export function preprocessIconData(rawIconDatas) {
   const iconDatas = {};
 
-  // Remove half of coordinates and scale down
+  // Remove some `sparsify_factor` of coordinates and scale down by `scale_factor`
   for (const key in rawIconDatas) {
-    // const iconData = iconDatas[key];
     iconDatas[key] = {};
     iconDatas[key].coordinates = rawIconDatas[key].coordinates.filter(
       (v, i) => i % rawIconDatas[key].sparsify_factor === 0
@@ -47,59 +38,28 @@ function preprocessIconData(rawIconDatas) {
   return iconDatas;
 }
 
-function animateIcons(iconDatas, canvasWidth, canvasHeight) {
-  if (!(iconDatas && canvasWidth && canvasHeight)) {
-    return;
-  }
-  const iconSpreadRadius = canvasHeight * (1 / 2.68);
-
-  // Define random cluster of starting points
-  const startingRadius = 50;
-  const numPointInCluster = 400;
-  const startingCoordinates = [];
-  for (let i = 0; i < numPointInCluster; i++) {
-    const r = Math.random() * startingRadius;
+export function makeCoordinateSpread(
+  radius,
+  pointCount,
+  canvasWidth,
+  canvasHeight
+) {
+  const coordinates = [];
+  for (let i = 0; i < pointCount; i++) {
+    const r = Math.random() * radius;
     const t = Math.random() * 2 * Math.PI;
-    startingCoordinates.push([
+    coordinates.push([
       r * Math.cos(t) + canvasWidth / 2,
       r * Math.sin(t) + canvasHeight / 2,
     ]);
   }
-
-  let j = 0;
-  const animeProps = {};
-  for (const iconName in iconDatas) {
-    const iconData = iconDatas[iconName];
-    animeProps[iconName] = [];
-
-    const angle = (Math.PI * 7) / 6 - j * iconAngularDifference;
-    const canvasLoc = [
-      iconSpreadRadius * Math.cos(angle),
-      iconSpreadRadius * -Math.sin(angle),
-    ];
-
-    for (let i = 0; i < iconData.coordinates.length; i++) {
-      const [startX, startY] = startingCoordinates[
-        Math.floor(Math.random() * startingCoordinates.length)
-      ];
-
-      const fromX = startX;
-      const toX = iconData.coordinates[i][0] + canvasWidth / 2 + canvasLoc[0];
-      const fromy = startY;
-      const toY = iconData.coordinates[i][1] + canvasHeight / 2 + canvasLoc[1];
-
-      animeProps[iconName].push({
-        translateX: [fromX, toX],
-        translateY: [fromy, toY],
-        width: [2, 2],
-        easing: "easeOutQuint",
-        delay: iconAnimInitialDelay + j * iconAnimSubsequentDelay,
-        duration: iconAnimDuration,
-      });
-    }
-    j++;
-  }
-  return animeProps;
+  return coordinates;
 }
 
-export { preprocessIconData, animateIcons };
+export function centerIconData(iconDatas, canvasWidth, canvasHeight) {
+  for (const iconName of Object.keys(iconDatas)) {
+    iconDatas[iconName]["coordinates"] = iconDatas[iconName][
+      "coordinates"
+    ].map(([x, y]) => [x + canvasWidth / 2, y + canvasHeight / 2]);
+  }
+}

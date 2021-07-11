@@ -3,9 +3,15 @@ import React, { useCallback, useState, useEffect } from "react";
 import Project from "../components/Project";
 import projects from "../content/projects";
 import { iconDatas } from "../util/data.js";
-import { animateIcons, preprocessIconData } from "../util/iconPointUtilities";
+import {
+  preprocessIconData,
+  makeCoordinateSpread,
+  centerIconData,
+} from "../util/iconPointUtilities";
 import { initializeAnimation, SCALE } from "../util/animate";
 import smoothscroll from "smoothscroll-polyfill";
+
+const adjustedIconData = preprocessIconData(iconDatas);
 
 const Welcome = () => {
   useEffect(() => {
@@ -26,9 +32,14 @@ const Welcome = () => {
   // Once the canvas has been created and sized, we can start the animation cycle
   useEffect(() => {
     if (canvasWidth && canvasHeight) {
-      const adjustedIconData = preprocessIconData(iconDatas);
-      const data = animateIcons(adjustedIconData, canvasWidth, canvasHeight);
-      initializeAnimation(data);
+      const startCoordinates = makeCoordinateSpread(
+        40,
+        400,
+        canvasWidth,
+        canvasHeight
+      );
+      centerIconData(adjustedIconData, canvasWidth, canvasHeight);
+      initializeAnimation(startCoordinates, adjustedIconData);
     }
   }, [canvasWidth, canvasHeight]);
 
@@ -58,7 +69,7 @@ const Welcome = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
-        <div className="w-full flex-grow flex flex-col items-center justify-center">
+        <div className="w-1/2 flex-grow flex flex-col items-center justify-center">
           <div className="flex flex-row justify-center items-center">
             <img
               alt="Portrait of Paul Biberstein"
@@ -67,29 +78,58 @@ const Welcome = () => {
             />
             <div>Paul Biberstein</div>
           </div>
-          <hr />
-          <div id="icons" className="w-5/6 lg:w-1/3 h-64 m-3" ref={canvasRef}>
-            {canvasHeight && canvasWidth ? (
-              <canvas
-                id="canvas"
-                height={canvasHeight * SCALE}
-                width={canvasWidth * SCALE}
-                className="w-full h-full"
-              />
-            ) : (
-              ""
-            )}
+          <hr className="w-full" />
+          <div className="flex flex-row items-center justify-center">
+            <div id="icons" className="w-64 h-64 m-3" ref={canvasRef}>
+              {canvasHeight && canvasWidth ? (
+                <canvas
+                  id="canvas"
+                  height={canvasHeight * SCALE}
+                  width={canvasWidth * SCALE}
+                  className="w-full h-full"
+                />
+              ) : (
+                ""
+              )}
+            </div>
+            <div id="welcome-subtitle" className="w-1/3 flex-grow">
+              I'm an undergraduate at Brown University interested in{" "}
+              <a
+                className="welcome-link"
+                onClick={() => scrollToAnchor("Web-projects")}
+              >
+                programming language
+              </a>{" "}
+              and compiler design, as well as CS education. In my free time, I
+              like exploring applications of CS to{" "}
+              <a
+                className="welcome-link"
+                onClick={() => scrollToAnchor("Acoustic-projects")}
+              >
+                music
+              </a>
+              , including computer music compositions and computational
+              musicology.
+              <br />
+              You can find more about me below, as well as some past projects
+              spanning all the topics above as well as{" "}
+              <a
+                className="welcome-link"
+                onClick={() => scrollToAnchor("Hardware-projects")}
+              >
+                hardware
+              </a>{" "}
+              and{" "}
+              <a
+                className="welcome-link"
+                onClick={() => scrollToAnchor("Web-projects")}
+              >
+                web development
+              </a>
+              .
+            </div>
           </div>
-          <div className="welcome-subtitle text-center">
-            <a onClick={() => scrollToAnchor("Web-projects")}>Web</a>,{" "}
-            <a onClick={() => scrollToAnchor("Hardware-projects")}>hardware</a>,
-            and{" "}
-            <a onClick={() => scrollToAnchor("Acoustic-projects")}>acoustic</a>{" "}
-            projects.
-          </div>
-          <hr />
-          <div>Student at Brown University</div>
-          <hr />
+          <hr className="w-full" />
           <div className="flex flex-row">
             <a
               className="text-black"
@@ -116,6 +156,7 @@ const Welcome = () => {
               />
             </a>
           </div>
+          <hr className="w-full" />
         </div>
         <div className="w-full mb-8 text-center">
           <div
