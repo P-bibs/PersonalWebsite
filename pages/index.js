@@ -92,14 +92,11 @@ const Welcome = () => {
                 ""
               )}
             </div>
-            <div
-              id="welcome-subtitle"
-              className="welcome-subtitle welcome-link-section w-1/3 flex-grow"
-            >
+            <div id="welcome-subtitle" className="w-1/3 flex-grow">
               I'm an undergraduate at Brown University interested in{" "}
               <a
                 className="welcome-link"
-                onClick={() => scrollToAnchor("Hardware-projects")}
+                onClick={() => scrollToAnchor("Web-projects")}
               >
                 programming language
               </a>{" "}
@@ -107,7 +104,7 @@ const Welcome = () => {
               like exploring applications of CS to{" "}
               <a
                 className="welcome-link"
-                onClick={() => scrollToAnchor("Hardware-projects")}
+                onClick={() => scrollToAnchor("Acoustic-projects")}
               >
                 music
               </a>
