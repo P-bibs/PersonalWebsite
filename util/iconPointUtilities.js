@@ -1,11 +1,3 @@
-// // Icon arrangement parameters
-// const iconAngularDifference = (2 * Math.PI) / 3;
-
-// // animation parameters
-// const iconAnimInitialDelay = 300;
-// const iconAnimSubsequentDelay = 500;
-// const iconAnimDuration = 1000;
-
 export function preprocessIconData(rawIconDatas) {
   const iconDatas = {};
 
@@ -71,38 +63,3 @@ export function centerIconData(iconDatas, canvasWidth, canvasHeight) {
     ].map(([x, y]) => [x + canvasWidth / 2, y + canvasHeight / 2]);
   }
 }
-
-// function animateIcons(iconDatas, canvasWidth, canvasHeight) {
-//   if (!(iconDatas && canvasWidth && canvasHeight)) {
-//     return;
-//   }
-
-//   let j = 0;
-//   const animeProps = {};
-//   for (const iconName in iconDatas) {
-//     const iconData = iconDatas[iconName];
-//     animeProps[iconName] = [];
-
-//     for (let i = 0; i < iconData.coordinates.length; i++) {
-//       const [startX, startY] = startingCoordinates[
-//         Math.floor(Math.random() * startingCoordinates.length)
-//       ];
-
-//       const fromX = startX;
-//       const toX = iconData.coordinates[i][0] + canvasWidth / 2;
-//       const fromy = startY;
-//       const toY = iconData.coordinates[i][1] + canvasHeight / 2;
-
-//       animeProps[iconName].push({
-//         translateX: [fromX, toX],
-//         translateY: [fromy, toY],
-//         width: [2, 2],
-//         easing: "easeOutQuint",
-//         delay: iconAnimInitialDelay + j * iconAnimSubsequentDelay,
-//         duration: iconAnimDuration,
-//       });
-//     }
-//     j++;
-//   }
-//   return animeProps;
-// }
