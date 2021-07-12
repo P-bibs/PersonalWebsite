@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../../../components/post-body";

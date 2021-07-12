@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import React, { useCallback, useState, useEffect } from "react";
 import Project from "../components/Project";
