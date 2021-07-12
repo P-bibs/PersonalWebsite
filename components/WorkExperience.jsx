@@ -10,7 +10,7 @@ const WorkExperience = ({
   responsibilities,
   location,
 }) => (
-  <div className="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row">
+  <div className="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center lg:items-start">
     <div className="w-36 h-36 lg:w-32 lg:h-32 relative">
       <div className="w-full h-full relative">
         {thumbnail ? (

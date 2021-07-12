@@ -62,9 +62,9 @@ const Welcome = () => {
         <title>Paul Biberstein</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
-        <div className="w-1/2 flex-grow flex flex-col items-center justify-center">
-          <div className="flex flex-row justify-center items-center">
+      <div className="w-full min-h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
+        <div className="min-w-1/2 mx-4 flex-grow flex flex-col items-center justify-center">
+          <div className=" mt-6 flex flex-row justify-center items-center">
             <img
               alt="Portrait of Paul Biberstein"
               className="w-16 h-16 rounded-full mr-2"
@@ -73,7 +73,7 @@ const Welcome = () => {
             <div>Paul Biberstein</div>
           </div>
           <hr className="w-full" />
-          <div className="flex flex-row items-center justify-center">
+          <div className="flex flex-row flex-wrap items-center justify-center">
             <div id="icons" className="w-64 h-64 m-3" ref={canvasRef}>
               {canvasHeight && canvasWidth ? (
                 <canvas
@@ -163,7 +163,7 @@ const Welcome = () => {
         <h2 id="Work-experience" className="my-2 text-center">
           Work Experience
         </h2>
-        <div className="w-11/12 lg:w-2/3  space-y-4">
+        <div className="w-full lg:w-2/3  space-y-4">
           {workExperiences.map((data) => (
             <div key={data.date} className="w-full px-4">
               <WorkExperience {...data} />
@@ -181,7 +181,7 @@ const Welcome = () => {
             >
               {key} Projects
             </h3>
-            <div className="w-11/12 lg:w-5/6 px-4 space-y-4">
+            <div className="w-full lg:w-5/6 px-4 space-y-4">
               {projects[key].map((data) => (
                 <Project key={data.title} {...data} />
               ))}
