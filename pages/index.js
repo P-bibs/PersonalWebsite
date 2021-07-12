@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { useCallback, useState, useEffect } from "react";
 import Project from "../components/Project";
 import projects from "../content/projects";
+import workExperiences from "../content/workExperiences";
 import { iconDatas } from "../util/data.js";
 import {
   preprocessIconData,
@@ -10,6 +11,7 @@ import {
 } from "../util/iconPointUtilities";
 import { initializeAnimation, SCALE } from "../util/animate";
 import smoothscroll from "smoothscroll-polyfill";
+import WorkExperience from "../components/WorkExperience";
 
 const adjustedIconData = preprocessIconData(iconDatas);
 
@@ -48,17 +50,9 @@ const Welcome = () => {
 
   const scrollToAnchor = (anchorString) => {
     if (mounted) {
-      const anchors = [
-        "Web-projects",
-        "Hardware-projects",
-        "Acoustic-projects",
-      ];
-
-      if (anchors.includes(anchorString)) {
-        document
-          .getElementById(anchorString)
-          .scrollIntoView({ behavior: "smooth" });
-      }
+      document
+        .getElementById(anchorString)
+        .scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -161,17 +155,33 @@ const Welcome = () => {
         <div className="w-full mb-8 text-center">
           <div
             className="scroll-arrow"
-            onClick={() => scrollToAnchor(`Web-projects`)}
+            onClick={() => scrollToAnchor(`Work-experience`)}
           ></div>
         </div>
       </div>
-      <div className="w-full pb-8 bg-gray-300 flex flex-col items-center">
+      <div className="pb-4 bg-gray-200 flex flex-col items-center">
+        <h2 id="Work-experience" className="my-2 text-center">
+          Work Experience
+        </h2>
+        <div className="w-11/12 lg:w-2/3  space-y-4">
+          {workExperiences.map((data) => (
+            <div key={data.date} className="w-full px-4">
+              <WorkExperience {...data} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="w-full bg-gray-300 flex flex-col items-center">
+        <h2 className="my-2 text-center">Projects</h2>
         {Object.keys(projects).map((key) => (
           <>
-            <h2 id={`${key}-projects`} className="text-center my-2 text-3xl">
+            <h3
+              id={`${key}-projects`}
+              className="text-center my-2 text-3xl font-light"
+            >
               {key} Projects
-            </h2>
-            <div className="w-full lg:w-5/6 px-4 space-y-4">
+            </h3>
+            <div className="w-11/12 lg:w-5/6 px-4 space-y-4">
               {projects[key].map((data) => (
                 <Project key={data.title} {...data} />
               ))}

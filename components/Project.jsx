@@ -27,7 +27,7 @@ const Project = (data) => (
     </div>
     <div className="lg:w-px flex-grow flex flex-col">
       <div className=" flex flex-row flex-wrap items-center">
-        <h2 className="mr-2">{data.title}</h2>
+        <h2 className="my-2 mr-2">{data.title}</h2>
         <div className="h-full space-x-2 flex flex-row flex-wrap justify-center">
           {data.interactions.map(({ type, href }) => (
             <span
@@ -55,14 +55,15 @@ const Project = (data) => (
         </div>
       </div>
       <div>
-        <h3>{data.short}</h3>
+        <h3 className="my-2 font-light">{data.short}</h3>
       </div>
       <div>
         {data.content.map((p) => (
           <ReactMarkdown key={p} source={p} />
         ))}
         <div className="mt-2">
-          <strong>Relevant Topics: </strong> {data.relevantTopics.join(", ")}
+          <strong>Relevant Topics: </strong>{" "}
+          <span className="font-light">{data.relevantTopics.join(", ")}</span>
         </div>
       </div>
     </div>

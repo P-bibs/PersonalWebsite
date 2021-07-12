@@ -5,11 +5,15 @@ a {
 }
 
 h2 {
-  @apply my-2 text-3xl;
+  @apply text-3xl;
 }
 
 h3 {
-  @apply my-2 text-2xl;
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
 }
 
 hr {
@@ -70,6 +74,10 @@ hr {
 .welcome-link:hover {
   transition: none;
   text-decoration: underline 0.15em rgba(59,130,246,1);
+}
+
+.markdown li {
+  @apply list-disc list-inside
 }
 
 
