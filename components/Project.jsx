@@ -55,14 +55,15 @@ const Project = (data) => (
         </div>
       </div>
       <div>
-        <h3 className="my-2">{data.short}</h3>
+        <h3 className="my-2 font-light">{data.short}</h3>
       </div>
       <div>
         {data.content.map((p) => (
           <ReactMarkdown key={p} source={p} />
         ))}
         <div className="mt-2">
-          <strong>Relevant Topics: </strong> {data.relevantTopics.join(", ")}
+          <strong>Relevant Topics: </strong>{" "}
+          <span className="font-light">{data.relevantTopics.join(", ")}</span>
         </div>
       </div>
     </div>
