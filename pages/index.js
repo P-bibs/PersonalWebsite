@@ -64,7 +64,7 @@ const Welcome = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full min-h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
-        <div className="min-w-1/2 mx-4 flex-grow flex flex-col items-center justify-center">
+        <div className="min-w-1/2 lg:w-1/2 mx-4 flex-grow flex flex-col items-center justify-center">
           <div className=" mt-6 flex flex-row justify-center items-center">
             <img
               alt="Portrait of Paul Biberstein"
