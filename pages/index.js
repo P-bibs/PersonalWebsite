@@ -91,7 +91,7 @@ const Welcome = () => {
               I'm an undergraduate at Brown University interested in{" "}
               <a
                 className="welcome-link"
-                onClick={() => scrollToAnchor("Web-projects")}
+                onClick={() => scrollToAnchor("Programming Languages-projects")}
               >
                 programming language
               </a>{" "}
