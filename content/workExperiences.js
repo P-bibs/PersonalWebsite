@@ -12,7 +12,7 @@ export default [
     location: "Providence, RI",
   },
   {
-    thumbnail: "brown.png",
+    thumbnail: "brownplt.png",
     company: "Brown University Programming Languages Team",
     position: "Undergraduate Researcher",
     date: "Summer 2021",

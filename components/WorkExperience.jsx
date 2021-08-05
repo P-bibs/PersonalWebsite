@@ -16,7 +16,7 @@ const WorkExperience = ({
         {thumbnail ? (
           <img
             alt={`${company} logo`}
-            className="shadow-inner"
+            className="shadow-inner h-full mx-auto"
             src={require(`../assets/thumbnails/${thumbnail}`)}
           />
         ) : (
