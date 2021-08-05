@@ -17,10 +17,12 @@ export default [
     position: "Undergraduate Researcher",
     date: "Summer 2021",
     description:
-      "Developed a webapp to facilitate data science exploration and analysis for the middle and high school level.",
+      "Develop and tested a webapp to help bring introductory data science to the middle and high school level.",
     responsibilities: [
-      "* Worked in team of 3 to deliver React webapp.",
-      "* Redeveloped lessons from the  equitable CS curriculum Bootstrap: Data Science to use new webapp.",
+      '* Designed data analysis system that makes "what-if" analysis and immutable data transformations accessible for students.',
+      "* Prototyped and iterated design with teachers and educators to arrive at final product.",
+      "* Ported lessons from the Bootstrap: Data Science curriculum to use new webapp.",
+      "* Webapp built collaboratively with a team of 3 using the React framework and Git for version control.",
     ],
     location: "Providence, RI",
   },
