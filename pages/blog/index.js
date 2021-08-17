@@ -21,7 +21,7 @@ export default function Index({ allPosts }) {
       <Header />
       <div className="w-1/3 mx-auto space-y-4">
         {allPosts.map(
-          (post) => !post.released && <PostPreview key={post.title} {...post} />
+          (post) => post.released && <PostPreview key={post.title} {...post} />
         )}
       </div>
       <Footer />
@@ -58,6 +58,7 @@ export async function getStaticProps() {
     "slug",
     "coverImage",
     "excerpt",
+    "released"
   ]);
 
   return {
