@@ -33,7 +33,6 @@
     "react-markdown": "^4.3.1",
     "react-scripts": "3.4.1",
     "remark": "11.0.2",
-    "remark-html": "10.0.0",
     "smoothscroll-polyfill": "^0.4.4",
     "webp-loader": "^0.6.0"
   },
@@ -53,7 +52,14 @@
     "eslint-plugin-standard": "^4.0.1",
     "postcss": "^8.2.14",
     "prettier": "^2.0.5",
-    "tailwindcss": "^2.1.2"
+    "remark-rehype": "^8.1.0",
+    "rehype-highlight": "^4.1.0",
+    "rehype-slug": "^4.0.1",
+    "rehype-stringify": "^8.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "tailwindcss": "^2.1.2",
+    "unified": "^9.2.2"
   },
   "eslintConfig": {
     "extends": "react-app"
