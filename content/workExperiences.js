@@ -1,5 +1,16 @@
 export default [
   {
+    thumbnail: "jump-trading.jpg",
+    company: "Jump Trading",
+    position: "Software Engineering Intern",
+    date: "Summer 2022",
+    description:
+      "Incoming software engineering intern",
+    responsibilities: [
+    ],
+    location: "Chicago, IL",
+  },
+  {
     thumbnail: "brown.png",
     company: "Brown University",
     position: "Head Teaching Assistant",
