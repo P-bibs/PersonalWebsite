@@ -11,21 +11,37 @@ export default [
     location: "Chicago, IL",
   },
   {
+    thumbnail: "brown-bvc.png",
+    company: "Brown Visual Computing Lab",
+    position: "Undergraduate Researcher (Graphics and Deep Learning)",
+    date: "Spring 2022",
+    description:
+      "Working on novel method for few-shot 3D mesh synthesis via transformer networks",
+    responsibilities: [
+      '* Exploring state-of-the-art methods for networks that learn implicit representations of 3D shapes',
+      "* Developing networks that learn quantized representations of 3D shapes",
+    ],
+    location: "Providence, RI",
+  },
+  {
     thumbnail: "brown.png",
     company: "Brown University",
-    position: "Head Teaching Assistant",
-    date: "Fall 2021",
+    position: "Teaching Assistant",
+    date: "Fall 2020—Fall 2022",
     description:
-      "CSCI 1730: Design and Implementation of Programming Languages",
+      "Develop course material and hold office hours for a variety of classes",
     responsibilities: [
-      "* Responsibilities include hiring undergraduate TAs, coordinating staff meetings, developing and updating course content, holding office hours, and grading student work.",
+      "* Head TA for cs173 (**Programming Languages**): lead course staff to assist with assignments ranging from type inference algorithms to lazy interpreters.",
+      "* TA for cs300 (**Intro Systems**): hold office hours, labs, and workshops to help students learn foundational systems skills. Developed new lab to introduce students to Rust.",
+      "* TA for cs126 (**Compilers**): hold office hours and labs to help students develop a compiler from lisp to x86 written in OCaml.",
+      "* TA for cs19 (**Accelerate Intro**): hold office hours and labs to help students learn foundational algorithms and data structures via functional programming."
     ],
     location: "Providence, RI",
   },
   {
     thumbnail: "brownplt.png",
     company: "Brown University Programming Languages Team",
-    position: "Undergraduate Researcher",
+    position: "Undergraduate Researcher (Programming Languages and Data Science)",
     date: "Summer 2021",
     description:
       "Develop and tested a webapp to help bring introductory data science to the middle and high school level.",
@@ -34,31 +50,6 @@ export default [
       "* Prototyped and iterated design with teachers and educators to arrive at final product.",
       "* Ported lessons from the Bootstrap: Data Science curriculum to use new webapp.",
       "* Webapp built collaboratively with a team of 3 using the React framework and Git for version control.",
-    ],
-    location: "Providence, RI",
-  },
-  {
-    thumbnail: "brown.png",
-    company: "Brown University",
-    position: "Undergraduate Teaching Assistant",
-    date: "Spring 2021",
-    description: "CSCI1260 Compilers and Program Analysis",
-    responsibilities: [
-      "* Worked with team of 5 TAs (both undergraduate and graduate) to help professor prepare a redesigned version of a compilers class.",
-      "* Assignments included developing a compiler from a dialect of LISP into x86_64 assembly using OCaml, and an additional selection of parsing and optimization assignments.",
-      "* Responsibilities included developing lab and homework assignments, holding weekly lab and office hours, and grading student work.",
-    ],
-    location: "Providence, RI",
-  },
-  {
-    thumbnail: "brown.png",
-    company: "Brown University",
-    position: "Undergraduate Teaching Assistant",
-    date: "Fall 2020",
-    description: "CSCI 0190 Accelerated Introduction to Computer Science",
-    responsibilities: [
-      "* Worked with group of 15 TAs and professor to run a 120 student introductory CS class teaching functional programming, data structures, and algorithms with the programming language Pyret",
-      "* Responsibilities included developing lab and homework assignments, holding weekly lab and office hours, and grading student work.",
     ],
     location: "Providence, RI",
   },
