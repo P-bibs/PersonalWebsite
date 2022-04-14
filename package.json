@@ -10,6 +10,10 @@
     "format": "prettier --write '{pages,util,lib,content,components}/**/*.{js,jsx}'",
     "format:check": "prettier --check '{pages,util,lib,content,components}/**/*.{js,jsx}'"
   },
+  "engines": {
+    "node": "14.16.x",
+    "npm": "6.14.x"
+  },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "@testing-library/jest-dom": "^4.2.4",
