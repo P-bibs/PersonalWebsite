@@ -150,6 +150,19 @@ const Welcome = () => {
                 src={require("../assets/linkedinicon.png")}
               />
             </a>
+            <a
+              className="text-black"
+              href="https://twitter.com/paulbib"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                alt="Paul Biberstein's Twitter"
+                className="w-6 h-6 m-3"
+                src={require("../assets/twittericon.png")}
+              />
+            </a>
+
           </div>
           <hr className="w-full" />
         </div>
