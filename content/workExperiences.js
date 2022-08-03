@@ -5,7 +5,7 @@ export default [
     position: "Software Engineering Intern",
     date: "Summer 2022",
     description:
-      "Incoming software engineering intern",
+      "",
     responsibilities: [
     ],
     location: "Chicago, IL",
@@ -66,18 +66,5 @@ export default [
       "* Migrated project to new tech stack for faster development: React & Django with Docker for deployment",
     ],
     location: "Portland, ME",
-  },
-  {
-    thumbnail: "maine.jpg",
-    company: "Maine Department of Health and Human Services",
-    position: "Web Development Intern",
-    date: "Summer 2019",
-    description: "",
-    responsibilities: [
-      "* Audited website for deprecated or non-ADA-compliant code by utilizing web crawling script",
-      "* Received direction from communications director to update current pages and format new pages",
-      "* Built script to scan for pages reporting status code 404 and worked with team to resolve",
-    ],
-    location: "Augusta, ME",
   },
 ];

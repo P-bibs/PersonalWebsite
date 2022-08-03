@@ -27,184 +27,29 @@ export default {
       ],
     },
   ],
-  Web: [
+  "Computer Graphics": [
     {
-      title: "Mix Capsule",
-      category: "web",
-      screen: "MixCapsule",
+      title: "Volumetric Renderer",
+      category: "computerGraphics",
+      screen: "PhotonMapping",
       interactions: [
         {
-          type: "DEMO",
-          href: "https://mixcapsule.paulbiberstein.me",
-        },
-        {
           type: "GITHUB",
-          href: "https://github.com/P-bibs/MixCapsule",
+          href: "https://github.com/neevparikh/rpt/tree/volumetric-photon-mapping",
         },
       ],
-      short: "Time capsule playlists delivered to you every month",
-      content: ["Description coming soon"],
-      relevantTopics: [
-        "JavaScript",
-        "NextJS",
-        "Python",
-        "Django",
-        "Tailwind",
-        "UI/UX",
-        "Music",
-      ],
-    },
-    {
-      title: "Tempo Trainer",
-      category: "web",
-      image: "tempotrainer.png",
-      screen: "TempoTrainer",
-      interactions: [
-        {
-          type: "DEMO",
-          href: "https://tempotrainer.paulbiberstein.me",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/Tempo-Trainer",
-        },
-      ],
-      short:
-        "Auto-generated, personalized Spotify playlists to keep pace while you run",
+      short: "A volumetric renderer in Rust implementing state-of-the-art photon mapping algorithms",
       content: [
-        "Tempo Trainer is a web app which harnesses the Spotify API to generate personalized playlists for running. The user enters some basic information, like height and sex, and then selects what sources they want their playlist to be pulled from (for example, their liked songs, their playlists, their most listened to tracks). Finally, they choose a pace they want to run at. Tempo Trainer deposits a playlist in their library containing songs the user already likes that have the correct tempo to help them run at their target pace.",
-      ],
-      relevantTopics: ["JavaScript", "React", "REST", "APIs", "UI/UX", "Music"],
-    },
-    {
-      title: "One Night: Quarantine Edition",
-      category: "web",
-      image: "onenight.png",
-      screen: "OneNight",
-      interactions: [
-        {
-          type: "DEMO",
-          href: "https://onenight.paulbiberstein.me/OneNight",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/One-Night-Quarantine-Edition",
-        },
-      ],
-      short:
-        "Play the board game One Night: Ultimate Werewolf and its expansions online",
-      content: [
-        `Developed during quarantine in early 2020, One Night: Quarantine Edition allows you to play the popular "One Night" tabletop games online, as well as selected expansions. In "One Night", players are given a secret role on either the villager or werewolf team. Then, the players close their eyes and each takes a turn performing their role's action. After everyone is done, players reopen their eyes and attempt to find the werewolves!`,
-        `This online version supports private rooms so you can invite your friends and allows as many players as needed. A variety of mechanics are in place to make up for the lack of physical interactions, including swapping cards, poking your neighbor, adding tokens, and more.`,
+        "A global illumination renderer that uses volumetric photon mapping to render physically accurate participating media such as fog and mist. A variety of volumetric photon mapping algorithms are implemented, from the original algorithm published in 1998 up to [recent work using lower-dimensional blurs](http://graphics.ucsd.edu/~henrik/papers/volumetric_radiance_using_photon_points_and_beams.pdf).",
       ],
       relevantTopics: [
-        "TypeScript",
-        "React",
-        "MobX",
-        "WebSockets",
-        "NodeJS",
-        "Express",
-      ],
-    },
-    {
-      title: "WikiKu",
-      category: "web",
-      image: "WikiKuPreview.png",
-      screen: "WikiKu",
-      interactions: [
-        {
-          type: "DEMO",
-          href: "https://wikiku.paulbiberstein.me/Wikiku",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/OceanPak/Wikiku",
-        },
-      ],
-      short: `Read Wikipedia articles as poems`,
-      content: [
-        `Made in just 24 hours for Hack@Brown 2020, WikiKu allows users to peruse Wikipedia articles in poem form through a calming interface. Users give a broad search category either through text input or scrolling a map. WikiKu takes the query and pores through related Wikipedia articles to produce delightful rhyming couplets. These poems are displayed on cards for the user, who can browse through them at a leisurely pace.`,
-      ],
-      relevantTopics: [
-        "TypeScript",
-        "React",
-        "MobX",
-        "Python",
-        "Flask",
-        "REST APIs",
+        "Rendering",
+        "Volumetric Photon Mapping",
+        "Beam Estimate",
+        "Rust",
       ],
     },
   ],
-
-  Hardware: [
-    {
-      title: "PyFyPi",
-      category: "hardware",
-      interactions: [
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/PyFyPi",
-        },
-      ],
-      short: `A PYthon-based LED visualizer, powered by spotiFY, running on raspberry PI`,
-      content: [
-        `PyFyPi is an easy-to-use LED visualizer which hooks into your Spotify account and lights up the room in time with the beat. PyFyPi is run off a Raspberry Pi which provides a simple web-interface where users can authenticate with their Spotify account. As soon as the authenticated user starts playing a song, the LEDs will start pulsing a variety of colors in time with the music. When playback stops, the LEDs will dim and wait for the music to start again.`,
-      ],
-      relevantTopics: [
-        "Python",
-        "Raspberry Pi",
-        "Addressable LEDs",
-        "UNIX process control",
-        "NodeJS",
-        "Express",
-        "REST APIs",
-        "Music",
-      ],
-    },
-    {
-      title: `"Thwack" Ski Timing Gate`,
-      category: "hardware",
-      screen: "Thwack",
-      interactions: [
-        {
-          type: "DOCUMENTATION",
-          href: "https://thwacktiminggate.com/",
-        },
-        {
-          type: "GITHUB",
-          href: "https://github.com/P-bibs/ThwackTimingGateApp",
-        },
-        // {
-        //   type: "GITHUB",
-        //   href: "https://github.com/P-bibs/ThwackTimingGateServer",
-        // },
-        // {
-        //   type: "GITHUB",
-        //   href: "https://github.com/P-bibs/ThwackTimingGateStartLine",
-        // },
-        // {
-        //   type: "GITHUB",
-        //   href: "https://github.com/P-bibs/ThwackTimingGateFinishLine",
-        // },
-      ],
-      short: `An affordable wireless ski-timing system`,
-      content: [
-        `The Thwack Ski Timing Gate is a timing system for alpine skiing, consisting of three parts: a start line, a finish line, and an app. `,
-      ],
-      relevantTopics: [
-        "Arduino",
-        "Raspberry Pi",
-        "XBee",
-        "Communication Protocols",
-        "CAD",
-        "3D-printing",
-        "Dart",
-        "Flutter",
-        "Mobile Development",
-      ],
-    },
-  ],
-
   Acoustic: [
     {
       title: `Coexistence`,
