@@ -152,6 +152,18 @@ const Welcome = () => {
             </a>
             <a
               className="text-black"
+              href="/PaulBibersteinResumeFall2021.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                alt="Paul Biberstein's Resume"
+                className="w-6 h-6 m-3"
+                src={require("../assets/resumeicon.png")}
+              />
+            </a>
+            <a
+              className="text-black"
               href="https://twitter.com/paulbib"
               target="_blank"
               rel="noopener noreferrer"
