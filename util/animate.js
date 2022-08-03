@@ -58,7 +58,7 @@ function draw(startCoordinates, iconData, start) {
     const linearProgress = scaleLinear(0, SINGLE_DURATION, 0, 1, elapsedTime);
     drawCircles(
       iconData["programmingLanguages"].coordinates,
-      iconData["music"].coordinates,
+      iconData["graphics"].coordinates,
       linearProgress
     );
     stopUnderlineAnimation(0);
@@ -73,8 +73,8 @@ function draw(startCoordinates, iconData, start) {
       elapsedTime
     );
     drawCircles(
+      iconData["graphics"].coordinates,
       iconData["music"].coordinates,
-      iconData["hardware"].coordinates,
       linearProgress
     );
     stopUnderlineAnimation(1);
@@ -89,12 +89,12 @@ function draw(startCoordinates, iconData, start) {
       elapsedTime
     );
     drawCircles(
-      iconData["hardware"].coordinates,
-      iconData["web"].coordinates,
+      iconData["music"].coordinates,
+      iconData["programmingLanguages"].coordinates,
       linearProgress
     );
     stopUnderlineAnimation(2);
-    startUnderlineAnimation(3);
+    startUnderlineAnimation(0);
   } else if (elapsedTime < ANIMATION_DURATION * 4) {
     // Animate from fourth icon to first icon
     const linearProgress = scaleLinear(
@@ -105,11 +105,11 @@ function draw(startCoordinates, iconData, start) {
       elapsedTime
     );
     drawCircles(
-      iconData["web"].coordinates,
+      iconData["programmingLanguages"].coordinates,
       iconData["programmingLanguages"].coordinates,
       linearProgress
     );
-    stopUnderlineAnimation(3);
+    stopUnderlineAnimation(0);
     startUnderlineAnimation(0);
   }
 

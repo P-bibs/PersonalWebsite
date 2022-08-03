@@ -95,7 +95,14 @@ const Welcome = () => {
               >
                 programming language
               </a>{" "}
-              and compiler design, as well as CS education. In my free time, I
+              and compiler design,{" "}
+              <a
+                className="welcome-link"
+                onClick={() => scrollToAnchor("Computer Graphics-projects")}
+              >
+                computer graphics
+              </a>{", "}
+                 and CS education. In my free time, I
               like exploring applications of CS to{" "}
               <a
                 className="welcome-link"
@@ -106,22 +113,7 @@ const Welcome = () => {
               , including computer music compositions and computational
               musicology.
               <br />
-              You can find more about me below, as well as some past projects
-              spanning all the topics above as well as{" "}
-              <a
-                className="welcome-link"
-                onClick={() => scrollToAnchor("Hardware-projects")}
-              >
-                hardware
-              </a>{" "}
-              and{" "}
-              <a
-                className="welcome-link"
-                onClick={() => scrollToAnchor("Web-projects")}
-              >
-                web development
-              </a>
-              .
+              You can find more about me below, as well as some past projects and places I've worked.
             </div>
           </div>
           <hr className="w-full" />
