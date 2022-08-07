@@ -144,7 +144,7 @@ const Welcome = () => {
             </a>
             <a
               className="text-black"
-              href="/PaulBibersteinResumeFall2021.pdf"
+              href="/PaulBibersteinResumeFall2022.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
