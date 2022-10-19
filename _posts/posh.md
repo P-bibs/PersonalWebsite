@@ -1,7 +1,6 @@
-
 ---
 title: "Notes on POSH"
-excerpt: 'The following notes were taken while reading POSH for [csci2952R: Systems Transforming Systems](https://cs.brown.edu/courses/info/csci2952-r/) taught by Nikos Vasilakis at Brown University in Fall of 2022.'
+excerpt: 'The following notes were taken while reading POSH for csci2952R: Systems Transforming Systems taught by Nikos Vasilakis at Brown University in Fall of 2022.'
 coverImage: "/blog/posh/title.png"
 date: "2022-10-19T05:35:07.322Z"
 author:
@@ -54,7 +53,7 @@ Some command line tools exist to parallelize execution of a shell script on remo
 
 # 3. System Overview
 
-![figure 1](fig1.png)
+![figure 1](/blog/posh/fig1.png)
 
 ## Annotation interface
 User must provide a separate file that has annotations for any function invocations that they want to be considered for offloading (these could be crowdsourced).
@@ -113,7 +112,7 @@ POSH can't cover certain situations like commands that take their file arugments
 
 # 5. Posh's Parser and Scheduler
 
-![figure 2](fig2.png)
+![figure 2](/blog/posh/fig2.png)
 
 ## 5.1 Posh's Program Representation
 Uses DAG internally to represent program. This tracks the dependencies between programs (via pipes) and inputs/outputs (like stdin, stdout, stderr).
