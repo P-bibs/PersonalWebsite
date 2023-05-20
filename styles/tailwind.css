@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .change {
-    color: black;
-  }
+.homepage-block {
+    @apply prose prose-stone dark:prose-invert prose-a:text-blue-600 prose-a:underline max-w-none;
 }
 
 .window-no-p {
     box-shadow: 4px 4px 0 0 black;
 }
-.window {
+.window, article > h2, article > h3 {
     box-shadow: 4px 4px 0 0 black;
     @apply border border-black p-4
 }
 
 .window-header {
     @apply text-3xl font-bold font-mono
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+.visually-hidden:not(:focus):not(:active) {
+  /* ... */
 }
