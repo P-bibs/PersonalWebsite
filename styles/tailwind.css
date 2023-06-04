@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 ul {
-  @apply list-disc list-outside;
+  @apply list-disc list-inside;
 }
 ol {
-  @apply list-disc list-outside;
+  @apply list-disc list-inside;
 }
 
 a {
-  @apply cursor-pointer text-blue-500;
+   @apply cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
 
 h2 {
@@ -111,20 +111,20 @@ hr {
   }
 }
 
-.welcome-link {
-  transition: text-decoration-color 500ms;
-  transition-timing-function: linear;
-  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-}
+/* .welcome-link { */
+/*   transition: text-decoration-color 500ms; */
+/*   transition-timing-function: linear; */
+/*   text-decoration: underline 0.15em rgba(0, 0, 0, 0); */
+/* } */
 
-.welcome-link[data-animation="running"] {
-  text-decoration-color: rgba(59,130,246,1);
-}
+/* .welcome-link[data-animation="running"] { */
+/*   text-decoration-color: rgba(59,130,246,1); */
+/* } */
 
-.welcome-link:hover {
-  transition: none;
-  text-decoration: underline 0.15em rgba(59,130,246,1);
-}
+/* .welcome-link:hover { */
+/*   transition: none; */
+/*   text-decoration: underline 0.15em rgba(59,130,246,1); */
+/* } */
 
 .markdown li {
   @apply list-disc list-inside

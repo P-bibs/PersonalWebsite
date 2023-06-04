@@ -1,11 +1,15 @@
 {% extends "_includes/default.njk" %}
 
 {% block content %}
-  <p id="sdf1" hidden>{{ sdf.sdf1 }}</p>
-  <p id="sdf2" hidden>{{ sdf.sdf2 }}</p>
-  <p id="sdf3" hidden>{{ sdf.sdf3 }}</p>
+  <p id="points1" hidden>{{ sdf.points1 }}</p>
+  <p id="points2" hidden>{{ sdf.points2 }}</p>
+  <p id="points3" hidden>{{ sdf.points3 }}</p>
+  <p id="points4" hidden>{{ sdf.points4 }}</p>
   <p id="fragmentShader" hidden>
     {% include "shader.frag" %}
+  </p>
+  <p id="vertexShader" hidden>
+    {% include "shader.vert" %}
   </p>
   <script src="https://lygia.xyz/resolve.js"></script>
   <script type="module">
@@ -22,7 +26,7 @@
       </div>
       <hr class="w-full"/>
       <div class="flex flex-row flex-wrap items-center justify-center">
-        <div id="hero-canvas" style="width: 256px; height: 256px" class="m-3"></div>
+        <div id="hero-canvas" style="width: 300px; height: 300px" class="m-3"></div>
         <div id="welcome-subtitle" class="w-1/3 flex-grow">
               I'm an undergraduate at Brown University interested in
               <a
@@ -42,8 +46,7 @@
                 class="welcome-link"
               >
                 music
-              </a>
-              , including computer music compositions and computational
+              </a>, including computer music compositions and computational
               musicology.
               <br/>
               You can find more about me below, as well as some past projects and places I've worked.
