@@ -27,6 +27,7 @@ module.exports = function (eleventyConfig) {
 
   // Custom plugins
   eleventyConfig.addPlugin(pluginDrafts);
+  eleventyConfig.addPlugin(pluginImages);
 
   // Official plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
