@@ -111,21 +111,6 @@ hr {
   }
 }
 
-/* .welcome-link { */
-/*   transition: text-decoration-color 500ms; */
-/*   transition-timing-function: linear; */
-/*   text-decoration: underline 0.15em rgba(0, 0, 0, 0); */
-/* } */
-
-/* .welcome-link[data-animation="running"] { */
-/*   text-decoration-color: rgba(59,130,246,1); */
-/* } */
-
-/* .welcome-link:hover { */
-/*   transition: none; */
-/*   text-decoration: underline 0.15em rgba(59,130,246,1); */
-/* } */
-
 .markdown li {
   @apply list-disc list-inside
 }
