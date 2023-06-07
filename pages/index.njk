@@ -5,12 +5,12 @@
   <p id="points2" hidden>{{ points.points2 }}</p>
   <p id="points3" hidden>{{ points.points3 }}</p>
   <p id="points4" hidden>{{ points.points4 }}</p>
-  <p id="fragmentShader" hidden>
+  <script id="fragmentShader" type="x-shader/x-vertex">
     {% include "shader.frag" %}
-  </p>
-  <p id="vertexShader" hidden>
+  </script>
+  <script id="vertexShader" type="x-shader/x-fragment">
     {% include "shader.vert" %}
-  </p>
+  </script>
   <script src="https://lygia.xyz/resolve.js"></script>
   <script type="module">
     {% include "main.js" %}
