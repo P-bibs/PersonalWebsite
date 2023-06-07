@@ -1,5 +1,4 @@
 var fs = require("fs");
-var png = require("upng-js");
 
 function preprocessIconData(rawIconDatas) {
   const iconDatas = {};

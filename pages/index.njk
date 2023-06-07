@@ -1,10 +1,10 @@
 {% extends "_includes/default.njk" %}
 
 {% block content %}
-  <p id="points1" hidden>{{ sdf.points1 }}</p>
-  <p id="points2" hidden>{{ sdf.points2 }}</p>
-  <p id="points3" hidden>{{ sdf.points3 }}</p>
-  <p id="points4" hidden>{{ sdf.points4 }}</p>
+  <p id="points1" hidden>{{ points.points1 }}</p>
+  <p id="points2" hidden>{{ points.points2 }}</p>
+  <p id="points3" hidden>{{ points.points3 }}</p>
+  <p id="points4" hidden>{{ points.points4 }}</p>
   <p id="fragmentShader" hidden>
     {% include "shader.frag" %}
   </p>
