@@ -17,6 +17,7 @@ relevantTopics:
   - Keras
   - Recurrent Neural Networks
   - JavaScript
+date: 2019-05-01
 ---
 ML Chord Gen is a webapp which utilizes a custom-trained neural network to provide the user with novel chord progressions. The chord progressions are generated subject to a number of tunable parameters, and the user can play them back in-browser with a variety of instruments to use as a backing track for improvisation or to inspire new compositions.
 

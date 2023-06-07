@@ -3,6 +3,7 @@ position: Researcher
 company: Brown Programming Languages Team
 location: Providence, RI
 during: Summer 2021
+date: 2021-06-01
 image: "../assets/brownplt.png"
 ---
 

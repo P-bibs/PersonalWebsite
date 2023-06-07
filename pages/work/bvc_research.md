@@ -3,6 +3,7 @@ position: Researcher
 company: Brown Visual Computing Lab
 location: Providence, RI
 during: 2022-2023
+date: 2022-01-01
 image: "../assets/brown-bvc.png"
 ---
 

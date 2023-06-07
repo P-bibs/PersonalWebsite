@@ -2,7 +2,8 @@
 position: Teaching Assistant
 company: Brown CS
 location: Providence, RI
-during: 2019—2023
+during: 2020—2023
+date: 2020-09-01
 image: "../assets/brown.png"
 ---
 

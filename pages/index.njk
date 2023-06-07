@@ -106,7 +106,7 @@
         </h2>
       <div class="w-full lg:w-2/3  space-y-4">
 
-        {% for work in collections.work %}
+        {% for work in collections.work | reverse %}
           <div class="w-full px-4">
             <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center lg:items-start">
               <div class="w-36 h-36 lg:w-32 lg:h-32 relative">
@@ -144,7 +144,7 @@
       <h2 class="my-2 text-center">Projects</h2>
       <div class="w-full lg:w-5/6 px-4 space-y-4">
 
-        {% for project in collections.project %}
+        {% for project in collections.project | reverse %}
           <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
             <div class="w-full h-48 lg:w-4/12 lg:h-64 relative">
               <div class="w-full h-full relative">

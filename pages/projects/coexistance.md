@@ -13,6 +13,7 @@ relevantTopics:
   - Multimedia
   - Microcontrollers
   - Electronics
+date: 2021-01-01
 ---
 Coexistence is a computer music composition consisting of a guitar, capacitive glove, and algorithmic synthesizer engine. Rather than use the guitar to directly create sound, the performer grounds the tips of their fingers against the strings to send instructions to an algorithmic engine running on a computer and direct its output. For example, the performer may pluck with one finger to set the tempo, or strum with a different finger to set a base chord.
 
