@@ -1,14 +1,11 @@
----
-layout: base.njk
----
-{# {% extends "_includes/default.njk" %}
-<main style="width: 100vw">
-    <div class="mx-auto w-1/2 py-5 flex flex-col justify-center">
-        <div>
-            {% block content %}{{ content | safe }}{% endblock %}
-        </div>
-    </div>
-</main> #}
+{% extends "_includes/default.njk" %}
+
+{% block head %}
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+{% endblock %}
+
+{% block content %}
  
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
@@ -30,10 +27,12 @@ layout: base.njk
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
-<div class="window footer bg-pink-100">Footer
+<div class="window footer bg-pink-100">
 	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 </div>
 <div>
 {%- endif %}
 {%- endif %}
+
+{% endblock %}
