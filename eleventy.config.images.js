@@ -32,23 +32,6 @@ module.exports = eleventyConfig => {
 		};
 		return eleventyImage.generateHTML(metadata, imageAttributes);
 	});
-    // eleventyConfig.addShortcode("image", async function(src, alt, className, widths) {
-		// if(alt === undefined) {
-			// throw new Error(`Missing \`alt\` on image from: ${src}`);
-		// }
-    //             let file = relativeToInputPath(this.page.inputPath, src);
-
-		// let metadata = await Image(file, {
-			// widths: widths || ["auto"],
-			// formats: ["webp"]
-    //                     outputDir: path.join(eleventyConfig.dir.output, "img"),
-		// });
-
-		// let data = metadata.webp[metadata.jpeg.length - 1];
-
-		// return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
-	// });
-
 };
 
 
