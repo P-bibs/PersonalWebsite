@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYM3P6HZ0L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TYM3P6HZ0L');
+    </script>
+
+    <title>
+      {% block title %}Paul Biberstein{% endblock %}
+    </title>
+    <meta charset="UTF-8"/>
+    {% if description %}
+      <meta name="description" content="{{description}}"/>
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+
+    {#-
+    CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+    1. You can add to them using `{% css %}`
+    2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+    3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+    4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+    #}
+    
+    {#- Add an arbitrary string to the bundle #}
+    {%- css %}* { box-sizing: border-box; }{% endcss %}
+    
+    {#- Add the contents of a file to the bundle #}
+    {# {%- css %}{% include "public/css/index.css" %}{% endcss %} #}
+    {#- Or add from node_modules #}
+    {# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+    
+    {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+    {# <style>{% getBundle "css" %}</style> #}
+    {#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+    {#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </body>
+</html>

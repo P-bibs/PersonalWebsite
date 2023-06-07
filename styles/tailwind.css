@@ -1,7 +1,16 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul {
+  @apply list-disc list-inside;
+}
+ol {
+  @apply list-disc list-inside;
+}
 
 a {
-  @apply  cursor-pointer text-blue-500;
+   @apply cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
 
 h2 {
@@ -20,7 +29,48 @@ hr {
   @apply h-px my-4 bg-gray-700 border-0;
 }
 
-@tailwind components;
+hr {
+  @apply h-px my-4 bg-gray-700 border-0;
+}
+
+.project-screen {
+  max-width: 66.6%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+
+  @apply absolute shadow;
+}
+
+.homepage-block {
+    @apply prose prose-stone dark:prose-invert prose-a:text-blue-600 prose-a:underline max-w-none;
+}
+
+.window-no-p {
+    box-shadow: 4px 4px 0 0 black;
+}
+.window, article > h2, article > h3 {
+    box-shadow: 4px 4px 0 0 black;
+    @apply border border-black p-4
+}
+
+.window-header {
+    @apply text-3xl font-bold font-mono
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+.visually-hidden:not(:focus):not(:active) {
+  /* ... */
+}
 
 .scroll-arrow {
   border: solid black;
@@ -61,25 +111,6 @@ hr {
   }
 }
 
-.welcome-link {
-  transition: text-decoration-color 500ms;
-  transition-timing-function: linear;
-  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-}
-
-.welcome-link[data-animation="running"] {
-  text-decoration-color: rgba(59,130,246,1);
-}
-
-.welcome-link:hover {
-  transition: none;
-  text-decoration: underline 0.15em rgba(59,130,246,1);
-}
-
 .markdown li {
   @apply list-disc list-inside
 }
-
-
-
-@tailwind utilities;
