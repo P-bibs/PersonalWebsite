@@ -29,13 +29,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "canvas": "^2.11.2",
-    "jsdom": "^22.0.0",
     "markdown-it-anchor": "^8.6.7",
-    "nan": "^2.17.0",
-    "prismjs": "^1.29.0",
-    "puppeteer": "^20.2.1",
-    "svg-path-sdf": "^1.1.3",
-    "upng-js": "^2.1.0"
+    "prismjs": "^1.29.0"
   }
 }
