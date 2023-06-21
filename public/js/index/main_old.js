@@ -6,7 +6,6 @@ function maker_buffer_geometry() {
   let points3 = JSON.parse(document.getElementById("points3").innerText);
   let points4 = JSON.parse(document.getElementById("points4").innerText);
 
-  console.log(points1.length, points2.length, points3.length, points4.length);
   let verts0 = [];
   let verts1 = [];
   let verts2 = [];
@@ -67,9 +66,9 @@ function maker_buffer_geometry() {
   return geometry;
 }
 
-function main() {
+function main(vertex_id, fragment_id, canvas_id) {
   window.THREE = THREE;
-  let canvas = document.getElementById("hero-canvas");
+  let canvas = document.getElementById(canvas_id);
   let width = canvas.clientWidth;
   let height = canvas.clientHeight;
 
@@ -85,8 +84,8 @@ function main() {
         ),
       },
     },
-    vertexShader: document.getElementById("vertexShader").textContent,
-    fragmentShader: document.getElementById("fragmentShader").textContent,
+    vertexShader: document.getElementById(vertex_id).textContent,
+    fragmentShader: document.getElementById(fragment_id).textContent,
 
     blending: THREE.NormalBlending,
     vertexColors: true,
@@ -117,4 +116,4 @@ function main() {
   animate();
 }
 
-main();
+export default main

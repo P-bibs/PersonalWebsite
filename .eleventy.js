@@ -9,6 +9,7 @@ const htmlmin = require("html-minifier");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
+const pluginShaders= require("./eleventy.config.shaders.js");
 
 const now = String(Date.now());
 
@@ -25,9 +26,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
 
+  eleventyConfig.addPassthroughCopy('pages/**/*.js');
+  eleventyConfig.addPassthroughCopy('pages/**/*.vert');
+  eleventyConfig.addPassthroughCopy('pages/**/*.frag');
+
   // Custom plugins
   eleventyConfig.addPlugin(pluginDrafts);
   eleventyConfig.addPlugin(pluginImages);
+  eleventyConfig.addPlugin(pluginShaders);
 
   // Official plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
