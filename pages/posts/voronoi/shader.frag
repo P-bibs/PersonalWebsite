@@ -80,4 +80,3 @@ void voronoi() {
 void main() {
     voronoi();
 }
-

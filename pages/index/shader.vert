@@ -1,9 +1,14 @@
+#version 300 es
+
+precision highp float;
+
 uniform float u_time;
 
-attribute vec3 position0;
-attribute vec3 position2;
-attribute vec3 position3;
-attribute vec3 position4;
+in vec3 position0;
+in vec3 position1;
+in vec3 position2;
+in vec3 position3;
+in vec3 position4;
 
 float remap(float low1, float high1, float low2, float high2, float value) {
     return low2 + (value - low1) * (high2 - low2) / (high1 - low1);
@@ -44,7 +49,6 @@ float exponentialInOut(float t) {
 }
 
 void main() {
-    vec3 position1 = position;
 
     const int KEYFRAMES = 11;
     vec3 shapes[KEYFRAMES] = vec3[](
