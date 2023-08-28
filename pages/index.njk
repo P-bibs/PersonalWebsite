@@ -5,181 +5,176 @@
   <p id="points2" hidden>{{ points.points2 }}</p>
   <p id="points3" hidden>{{ points.points3 }}</p>
   <p id="points4" hidden>{{ points.points4 }}</p>
-  <div class="w-full min-h-screen m-0 p-0 flex flex-col justify-center items-center content-center">
-    <div class="min-w-1/2 lg:w-1/2 mx-4 flex-grow flex flex-col items-center justify-center">
-      <div class=" mt-6 flex flex-row justify-center items-center">
-        <div class="w-16 h-16 rounded-full overflow-hidden mr-2">
-          {% image "../assets/portrait.png",
-          "Portrait of Paul Biberstein" %}
-        </div>
-        <div>Paul Biberstein</div>
-      </div>
-      <hr class="w-full"/>
-      <div class="flex flex-row flex-wrap items-center justify-center">
-        <div style="width: 300px; height: 300px" class="m-3">
-          {% nodefer_shader "./index/shader.vert", "./index/shader.frag", "./index/main.js" %}
-        </div>
-        <div id="welcome-subtitle" class="w-1/3 flex-grow">
-              I'm an undergraduate at Brown University interested in programming language
-              and compiler design, computer graphics, and CS education. In my free time, I like exploring applications of CS to
-              music, including computer music compositions.
-              <br/>
-              You can find more about me below, as well as some past projects and places I've worked.
-            </div>
-      </div>
-      <hr class="w-full"/>
-      <div class="flex flex-row">
-        <a
-          class="text-black w-6 h-6 m-3"
-          href="https://github.com/p-bibs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {% image "../assets/githubicon.png",
-          "Paul Biberstein's Github" %}
-        </a>
-        <a
-          class="text-black w-6 h-6 m-3"
-          href="https://linkedin.com/in/paulbib/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {% image "../assets/linkedinicon.png",
-          "Paul Biberstein's LinkedIn" %}
-        </a>
-        <a
-          class="text-black w-6 h-6 m-3"
-          href="/PaulBibersteinResumeFall2022.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {% image "../assets/resumeicon.png",
-          "Paul Biberstein's Resume" %}
-          <a
-          class="text-black w-6 h-6 m-3"
-          href="https://twitter.com/paulbib"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            {% image "../assets/twittericon.png",
-            "Paul Biberstein's Twitter" %}
-          </a>
-
-        </div>
-        <hr class="w-full"/>
-      </div>
-      <div class="w-full mb-8 text-center">
-        <a
-            class="block scroll-arrow"
-            href="#Work-experience"
-          ></a>
-      </div>
-    </div>
-    <div class="pb-4 bg-gray-200 flex flex-col items-center">
-      <h2 id="Work-experience" class="my-2 text-center">
-          Work Experience
-        </h2>
-      <div class="w-full lg:w-2/3  space-y-4">
-
-        {% for work in collections.work | reverse %}
-          <div class="w-full px-4">
-            <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center lg:items-start">
-              <div class="w-36 h-36 lg:w-32 lg:h-32 relative">
-                <div class="w-full h-full relative">
-                  {% if "image" in work.data %}
-                    <div class="h-full">
-                      {% image work.data.image, work.data.company, "400vw, 100vw", "", "height: 100%; object-fit: scale-down; margin: auto" %}
-                    </div>
-                  {% else %}
-                    <div class="w-full h-full text-center text-2xl bg-gray-400 rounded flex flex-col items-center justify-center">
-                      {{ work.data.company }}
-                    </div>
-                  {% endif %}
-                </div>
-              </div>
-              <div class="lg:w-px flex-grow flex flex-col">
-                <div class=" flex flex-row flex-wrap items-center">
-                  <h4 class="mr-2 font-bold ">{{ work.data.position }}</h4>
-                  <div class="text-gray-600">{{ work.data.location }}</div>
-                  <div class="text-right flex-grow">{{ work.data.during }}</div>
-                </div>
-                <div>
-                  <h4 class="font-light">{{ work.data.company }}</h4>
-                </div>
-                <div>
-                  {{ work.content | safe }}
-                </div>
-              </div>
-            </div>
+  <div class="w-full min-h-screen m-0 mb-6 p-0 flex flex-col justify-center items-center content-center">
+    <div class="min-w-1/2 md:w-5/6 lg:w-4/5 xl:w-2/3 2xl:w-1/2 mx-2 md:mx-auto space-y-4">
+      <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+        <div class="window hover:shadow-cyan-200 flex items-center justify-center">
+          <div style="width: 200px; height: 200px" class="m-3">
+            {% nodefer_shader "./index/shader.vert",
+            "./index/shader.frag",
+            "./index/main.js" %}
           </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="w-full bg-gray-300 flex flex-col items-center">
-      <h2 class="my-2 text-center">Projects</h2>
-      <div class="w-full lg:w-5/6 px-4 space-y-4">
-
-        {% for project in collections.project | reverse %}
-          <div class="w-full p-4 rounded shadow bg-white space-x-4 flex flex-col lg:flex-row items-center">
-            <div class="w-full h-48 lg:w-4/12 lg:h-64 relative">
-              <div class="w-full h-full relative">
-                {% if "screen1" in project.data %}
-                  <div class="w-full h-full relative">
-                      {% image project.data.screen1, project.data.title, "400vw, 100vw", "project-screen", "top: 0px; left: 0px; height: 100%; object-fit: scale-down; margin: auto" %}
-                      {% image project.data.screen2, project.data.title, "400vw, 100vw", "project-screen", "bottom: 0px; right: 0px; height: 100%; object-fit: scale-down; margin: auto" %}
-                  </div>
-                {% else %}
-                  <div class="w-full h-full text-center text-2xl bg-gray-400 rounded flex flex-col items-center justify-center">
-                    {{ project.data.title }}
-                  </div>
-                {% endif %}
-              </div>
+        </div>
+        <div class="flex-grow flex flex-col justify-between space-y-4">
+          <div id="name" class="window flex flex-row justify-end items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden mr-2">
+              {% image "../assets/portrait.png",
+              "Portrait of Paul Biberstein" %}
             </div>
-            <div class="lg:w-px flex-grow flex flex-col">
-              <div class=" flex flex-row flex-wrap items-center">
-                  <h2 class="my-2 mr-2">{{ project.data.title }}</h2>
-                <div class="h-full space-x-2 flex flex-row flex-wrap justify-center">
-                  {% for interaction in project.data.interactions %}
-
-                    <span
-              class="px-3 py-1 rounded-full font-semibold text-sm text-gray-700 bg-gray-200 hover:bg-gray-400 cursor-pointer"
-            >
-                      <a
-                class="no-underline"
-                rel="noreferrer"
-                target="_blank"
-                href="{{ interaction.href }}"
+            <h2 class="text-2xl">Paul Biberstein</h2>
+          </div>
+          <div class="window hover:shadow-orange-600 text-right">
+            Ph.D student at the University of Pennsylvania studying programming languages, computer graphics, and music
+          </div>
+          <div class="flex flex-row flex-wrap gap-y-4 md:flex-nowrap justify-between space-x-4">
+            <div
+            class="window-no-p hover:shadow-pink-300 -md:order-last flex-grow flex flex-row items-center text-black h-16"
               >
-                        {% if interaction.type == "GITHUB" %}
-                  Github
-              {% elif interaction.type == "DEMO" %}
-                  See it live
-              {% elif interaction.type == "DOCUMENTATION" %}
-                  Documentation
-              {% elif interaction.type == "PYPI" %}
-                  Install from PYPI
-              {% else %}
-                  UNKNOWN
-              {% endif %}
-                      </a>
-                    </span>
-                  {% endfor %}
-                </div>
+              <div class="inline-block w-16 h-16 p-4">
+                {% image "../assets/mail.png",
+              "Paul Biberstein's e-mail address" %}
               </div>
-              <div>
-                <h3 class="my-2 font-light">{{ project.data.short }}</h3>
-              </div>
-              <div>
-                {{ project.content | safe }}
-                <div class="mt-2">
-                  <strong>Relevant Topics: </strong>
-                  <span class="font-light">{{ project.data.relevantTopics }}</span>
-                </div>
-              </div>
+              <a
+              href="mailto:paulbib@seas.upenn.edu"
+              target="_blank"
+            >
+            paulbib@seas.upenn.edu
+            </a>
+            </div>
+            <a 
+            class="-md:flex-grow window hover:shadow-purple-600 text-black w-16 h-16 p-4 -md:!ml-0"
+            href="https://github.com/p-bibs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+              {% image "../assets/githubicon.png",
+              "Paul Biberstein's Github", 
+              "", 
+              "object-contain h-full mx-auto"%}
+            </a>
+            <a 
+            class="-md:flex-grow window hover:shadow-sky-600 text-black w-16 h-16 p-4"
+            href="https://linkedin.com/in/paulbib/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+              {% image "../assets/linkedinicon.png",
+              "Paul Biberstein's LinkedIn", 
+              "", 
+              "object-contain h-full mx-auto"%}
+            </a>
+            <a 
+            class="-md:flex-grow window hover:shadow-gray-400 text-black w-16 h-16 p-4"
+            href="/PaulBibersteinResumeFall2022.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+              {% image "../assets/resumeicon.png",
+              "Paul Biberstein's Resume", 
+              "", 
+              "object-contain h-full mx-auto"%}
+              <a 
+            id="twitter"
+            class="-md:flex-grow window hover:shadow-sky-400 text-black w-16 h-16 p-4"
+            href="https://twitter.com/paulbib"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+                {% image "../assets/twittericon.png",
+                "Paul Biberstein's Twitter", 
+                "", 
+                "object-contain h-full mx-auto"%}
+              </a>
+
             </div>
           </div>
-        {% endfor %}
+        </div>
+        <div id="past" class="window w-full">
+          <h2>Past</h2>
+          <div>
+            <p>I received my Bachelors from Brown, where I researched programming systems for data science under
+            <a target="_blank" rel="noopener noreferrer" href="https://cs.brown.edu/~sk/">Shriram Krishnamurthi</a> and neural scene representations with
+            <a target="_blank" rel="noopener noreferrer" href="https://dritchie.github.io/">Daniel Ritchie</a>. I also served as an undergraduate TA in a number of courses including
+            <a target="_blank" rel="noopener noreferrer" href="https://cs.brown.edu/courses/cs173/2021/">programming languages</a>,
+            <a target="_blank" rel="noopener noreferrer" href="https://browncs1260.github.io/">compilers</a>, and
+            <a target="_blank" rel="noopener noreferrer" href="https://cs2240.graphics/">computer graphics</a>.</p>
+            <br/>
+            <p>
+            While an undergraduate, I interned at
+            <ul>
+                <li>
+                  <strong>MedRhythms</strong>, a digital therapeutics startup using audio processing to help stroke-survivors</li>
+                <li>
+                  <strong>Jump Trading</strong>, an international quantitative trading firm based in Chicago
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div id="present" class="window w-full">
+          <h2>Present</h2>
+          <div>
+            <p>
+            I'm currently a Ph.D student at the University of Pennsylvania where I'm working with <a target="_blank" rel="noopener noreferrer" href="https://www.cis.upenn.edu/~mhnaik/">Mayur Naik</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.cis.upenn.edu/~devietti/">Joe Devietti</a> and the intersection of programming languages and GPGPU programming.
+            </p>
+          </div>
+        </div>
+        <div id="projects" class="window w-full">
+          <h2>Projects</h2>
+          <div>
+            <h3>Volumetric Renderer using Photon Mapping</h3>
+            <p>
+            A global illumination renderer written in Rust that uses volumetric photon mapping to render physically accurate participating media such as fog and mist. A variety of volumetric photon mapping algorithms are implemented, from the original algorithm published in 1998 up to <a target="_blank" rel="noopener noreferrer" href="http://graphics.ucsd.edu/~henrik/papers/volumetric_radiance_using_photon_points_and_beams.pdf">recent work using lower-dimensional blurs</a>.
+            <br/>
+              <br/>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/neevparikh/rpt/tree/volumetric-photon-mapping">See it on Github</a>
+            </p>
+          </div>
+          <div class="mt-2">
+            <h3>Skiff</h3>
+            <p>
+            A functional scripting language written in Rust and with interpreter available as a native binary or a WebAssembly-based online editor. Features include much of the standard fare including type inference, algebraic data types, pattern matching with exhaustiveness checking, and legible error messages.
+            <br/>
+              <br/>
+            You can see
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/P-bibs/skiff">the code on Github</a>, the
+            <a target="_blank" rel="noopener noreferrer" href="https://crates.io/crates/skiff">package on crates.io</a>, or the
+            <a target="_blank" rel="noopener noreferrer" href="https://skiff.paulbiberstein.me/">online editor</a>.
+            </p>
+          </div>
+          <div class="mt-2">
+            <h3>Multi-Armed Bandits for Adaptive Large Neighborhood Search</h3>
+            <p>
+            This project (which was also my undergraduate capstone work) involved improving the performance of a specific local-search algorithm known as Adaptive Large Neighborhood Search (ALNS) by applying existing algorithms for solving the Multi-Armed Bandit problem.
+            <br/>
+              <br/>
+            See
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/P-bibs/ALNS">the code on Github</a> or
+            <a target="_blank" rel="noopener noreferrer" href="https://cs.brown.edu/media/filer_public/ba/c5/bac53530-7432-4d04-870f-701e7b7dcdb0/bibersteinpaul.pdf">the abstract</a>.
+            </p>
+          </div>
+          <div class="mt-2">
+            <h3>Coexistance</h3>
+            <p>
+            Coexistance is a computer-music composition for guitar, glove, and algorithmic engine. Implemented using the Max/MSP programming and performance environment. The piece explores the relationship between the performer and the computer by reimagining the guitar not as an acoustic instrument, but as an instrument for sending instructions to an algorithmic music engine running on a computer.
+            <br/>
+              <br/>
+            See
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dzQmvAuiaNY&t">a recording of the piece</a>
+            </p>
+          </div>
+          <div class="mt-2">
+            <h3>ML Chord Gen</h3>
+            <p>
+            ML Chord Gen is a webapp for generating chord progressions using a recurrent neural network. The model was trained on a dataset of 1000+ chord progressions from popular music. While the architecture is quite dated by now, it still produces reasonable output.
+            <br/>
+              <br/>
+            See
+            <a target="_blank" rel="noopener noreferrer" href="https://chordgen.paulbiberstein.me/">the webapp online</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  {% endblock %}
+  </div>
+{% endblock %}

@@ -5,20 +5,35 @@
 ul {
   @apply list-disc list-inside;
 }
+
 ol {
   @apply list-disc list-inside;
 }
 
-a {
-   @apply cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+a[href^="mailto"] {
+  @apply cursor-pointer underline text-blue-600 hover: text-blue-800 visited:text-purple-600
+}
+
+/* a { */
+/*   @apply cursor-pointer shadow-inner bg-gray-200 px-2 hover:bg-gray-400 text-blue-700 hover:text-blue-900 */
+/* } */
+a:not(:has(>picture))[href^="http"] {
+  box-shadow: 2px 2px 0 0 black;
+  margin: 0rem 2px;
+  @apply cursor-pointer border border-black
+}
+
+a:hover:not(:has(>picture))[href^="http"] {
+  /* box-shadow: 0px 0px 0 0 gray; */
+  @apply bg-gray-100
 }
 
 h2 {
-  @apply text-3xl;
+  @apply text-3xl font-mono transition-colors duration-300;
 }
 
 h3 {
-  @apply text-2xl;
+  @apply text-2xl font-bold;
 }
 
 h4 {
@@ -33,6 +48,60 @@ hr {
   @apply h-px my-4 bg-gray-700 border-0;
 }
 
+.homepage-block {
+  @apply prose prose-stone dark: prose-invert prose-a:text-blue-600 prose-a:underline max-w-none;
+}
+
+.window-no-p {
+  @apply border border-black transition-shadow duration-300 shadow-black shadow-hard
+}
+
+.window,
+article>h2,
+article>h3 {
+  @apply border border-black p-4 transition-shadow duration-300 shadow-black shadow-hard
+}
+
+#name:hover {
+  @apply shadow-lime-500
+}
+
+#name:hover h2 {
+  @apply text-lime-500
+}
+
+#twitter:hover {
+  @apply shadow-lime-500
+}
+
+#twitter:hover h2 {
+  @apply text-lime-500
+}
+
+#past:hover {
+  @apply shadow-red-400
+}
+
+#past:hover h2 {
+  @apply text-red-400
+}
+
+#present:hover {
+  @apply shadow-blue-400
+}
+
+#present:hover h2 {
+  @apply text-blue-400
+}
+
+#projects:hover {
+  @apply shadow-purple-500
+}
+
+#projects:hover h2 {
+  @apply text-purple-500
+}
+
 .project-screen {
   max-width: 66.6%;
   max-height: 75%;
@@ -43,31 +112,21 @@ hr {
 }
 
 .homepage-block {
-    @apply prose prose-stone dark:prose-invert prose-a:text-blue-600 prose-a:underline max-w-none;
+  @apply prose prose-stone dark: prose-invert prose-a:text-blue-600 prose-a:underline max-w-none;
 }
 
-.window-no-p {
-    box-shadow: 4px 4px 0 0 black;
-}
-.window, article > h2, article > h3 {
-    box-shadow: 4px 4px 0 0 black;
-    @apply border border-black p-4
-}
-
-.window-header {
-    @apply text-3xl font-bold font-mono
-}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
+
 .visually-hidden:not(:focus):not(:active) {
   /* ... */
 }
