@@ -10,19 +10,29 @@ ol {
   @apply list-disc list-inside;
 }
 
-a[href^="mailto"] {
-  @apply cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600
-}
-a:not(:has(>picture))[href^="http"] {
-  box-shadow: 2px 2px 0 0 black;
-  margin: 0rem 2px;
-  @apply cursor-pointer border border-black
-}
-a:hover:not(:has(>picture))[href^="http"] {
-  /* box-shadow: 0px 0px 0 0 gray; */
-  @apply bg-gray-100
+/* a[href^="mailto"] { */
+/*   @apply cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600 */
+/* } */
+/* a:not(:has(>picture))[href^="http"] { */
+/*   box-shadow: 2px 2px 0 0 black; */
+/*   margin: 0rem 2px; */
+/*   @apply cursor-pointer border border-black */
+/* } */
+/* a:hover:not(:has(>picture))[href^="http"] { */
+/*   /1* box-shadow: 0px 0px 0 0 gray; *1/ */
+/*   @apply bg-gray-100 */
+/* } */
+/* a { */
+/*   @apply border border-black border-dotted hover:bg-gray-100; */
+/* } */
+
+a {
+  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
 }
 
+h1 {
+  @apply text-4xl font-mono transition-colors duration-300;
+}
 h2 {
   @apply text-3xl font-mono transition-colors duration-300;
 }
@@ -52,11 +62,11 @@ article>h3 {
 }
 
 #twitter:hover {
-  @apply shadow-lime-500
+  @apply shadow-sky-300;
 }
 
 #twitter:hover h2 {
-  @apply text-lime-500
+  @apply text-sky-300;
 }
 
 #past:hover {
